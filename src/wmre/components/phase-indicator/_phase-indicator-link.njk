@@ -1,0 +1,27 @@
+{% macro wmrePhaseIndicatorLink(params) %}
+{% from "wmre/components/phase-indicator/_phase-indicator.njk" import wmrePhaseIndicator %}
+{%- from "wmre/components/link/link/_link.njk" import wmreLink -%}
+{# Set vars #}
+{% set text = params.text if params.text %}
+{% set link = params.link if params.link %} {# set button text #}
+{% set linkTitle = params.linkTitle if params.linkTitle %} {# set button text #}
+<div class="wmre-grid wmre-banner-container">
+  <div class="wmre-col-auto wmre-float-left wmre-m-r-xsm">
+    {{
+      wmrePhaseIndicator() | indent(6) | trim
+   }}
+  </div>
+  <div class="wmre-col-auto">
+     <p class="wmre-banner-container__text">
+      {{ wmreLink({
+        text: text,
+        link: link,
+        linkTitle: linkTitle,
+        linkTarget: '_blank'
+        }) | indent(6) | trim
+     }}
+     </p>
+  </div>
+</div>
+
+{% endmacro %}

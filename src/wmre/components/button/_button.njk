@@ -1,0 +1,56 @@
+{% macro wmreButton(params) %}
+{# Imports #}
+{% from "wmre/components/icon/_icon.njk" import wmreIcon %}
+{% from "wmre/components/loader/_loader.njk" import wmreLoader %}
+{# Set #}
+{% set text = params.text if params.text else "Button text" %} {# set button text #}
+{% set iconRight = params.iconRight if params.iconRight %} {# set icon right classes #}
+{% set iconLeft = params.iconLeft if params.iconLeft %} {# set svg left reference #}
+{% set paramClass = " " + params.classNames if params.classNames %} {# set paramClass to params.classNames if any #}
+{# if button disabled is true #}
+{% if params.disabled %}
+  {% set classNames = paramClass + " wmre-btn--disabled" %}
+{% else %}
+  {% set classNames = paramClass if paramClass %}
+{% endif %}
+
+<button class="wmre-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %}>
+    {#- iconLeft -#}
+    {% if iconLeft %}
+    {{
+      wmreIcon({
+        icon: iconLeft,
+        class: 'wmre-btn__icon'
+      }) | indent | trim
+    }}
+    {{ text -}}
+
+    {#- iconRight -#}
+    {% elseif iconRight -%}
+    {{ text }}
+    {{
+      wmreIcon({
+        icon: iconRight,
+        class: 'wmre-btn__icon wmre-btn__icon--right'
+      }) | indent | trim
+    }}
+
+    {%- elseif params.loading %}
+    {{ text }}
+    {#- Loading spinner -#}
+    {{
+      wmreLoader({
+        customClass: 'wmre-btn__icon wmre-btn__icon--right',
+        size: 'btn'
+      }) | indent(2) | trim
+    }}
+
+
+
+    {#- noIcon -#}
+    {% else -%}
+    {{text}}
+    {%- endif %}
+</button>
+
+{% endmacro %}

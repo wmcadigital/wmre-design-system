@@ -1,0 +1,7 @@
+{% macro wmreIcon(params) %}
+
+<svg {% if params.class %}class="{{params.class}}"{% endif %}>
+  <use xlink:href="#wmre-{{params.icon}}" href="#wmre-{{params.icon}}"></use>
+</svg>
+
+{% endmacro %}

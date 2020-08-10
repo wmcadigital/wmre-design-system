@@ -1,0 +1,9 @@
+{% macro wmreQuestion(params) %}
+{# Set vars and defaults #}
+{% set text = params.text if params.text else "How would you...?" %}
+
+<h3 class="wmre-fe-question">
+  {{text}}
+</h3>
+
+{% endmacro %}

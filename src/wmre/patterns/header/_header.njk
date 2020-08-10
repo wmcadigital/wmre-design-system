@@ -1,0 +1,82 @@
+{% macro wmreHeader(params) %}
+{# Set navItems #}
+{% set navItems = params.navItems %}
+{% set appClass = " wmre-header--mobile-app" if params.app else "" %}
+{# Imports #}
+{% from "wmre/components/phase-indicator/_phase-indicator.njk" import wmrePhaseIndicator %}
+{% from "wmre/components/link/link/_link.njk" import wmreLink %}
+
+<!-- Skip to content link -->
+{{
+  wmreLink({
+    link: '#wmre-main-content',
+    linkTitle: 'Skip to main content',
+    text: 'Skip to main content',
+    classModifiers: 'wmre-header__skip-link'
+  }) | trim
+}}
+<!-- Main header section -->
+<header class="wmre-header{{appClass}}">
+  <div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between">
+    <div class="wmre-header__vertical-align wmre-col-auto">
+      <!-- Logo -->
+      <a class="wmre-header__logo-link" href="/" title="West Midlands Rail Executive Design System">
+        <img class="wmre-header__logo" alt="West Midlands Rail Executive logo" src="/img/logo.svg" />
+      </a>
+      <!-- Phase indicator -->
+      {{
+        wmrePhaseIndicator() | indent(6) | trim
+      }}
+    </div>
+
+    {#- If with a title #}
+    {% if params.withTitle -%}
+    <!-- Header title -->
+    <h1 class="wmre-header__title wmre-col-1 wmre-col-sm-auto">
+      Reinstate your Direct Debit<br>(COVID-19)
+    </h1>
+    {%- else %}
+    {#- Else with a navigation -#}
+    <!-- Nav items -->
+    <nav class="wmre-header__vertical-align wmre-col-auto">
+      <ul class="wmre-header__links wmre-header__main-links">
+        {% for navItem in navItems -%}
+        <li class="wmre-header__link">
+          <a href="$*baseUrl/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self" class="wmre-link" >
+            {{ navItem.name}}
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+
+      {%- if params.app %}
+      <!-- Back button -->
+      <ul class="wmre-header__links wmre-header__back-btn">
+        <li class="wmre-header__link">
+          <a
+            href="#"
+            title="Go back to previous page"
+            target="_self"
+            class="wmre-link"
+            onClick="goBack(event);"
+          >
+            Back
+          </a>
+        </li>
+      </ul>
+      <script>
+        // Function that sends user to previous page they were on,
+        // This can be included in your local javascript file
+        function goBack(e) {
+          e.preventDefault();
+          window.history.back();
+        }
+      </script>
+      <!-- End back button -->
+      {%- endif %}
+    </nav>
+    {% endif %}
+  </div>
+</header>
+
+{% endmacro %}

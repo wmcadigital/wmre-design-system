@@ -1,0 +1,27 @@
+{% macro wmreInput(params) %}
+
+{# Imports #}
+{% from "wmre/components/form-elements/label/_label.njk" import wmreLabel %}
+{% from "wmre/components/form-elements/error-message/_error-message.njk" import wmreFeErrorMessage %}
+
+{# Params #}
+{% set id = params.id if params.id else "input" %}
+{% set groupErrorClass = " wmre-fe-group--error" if params.error %}
+{% set errorClass = " wmre-fe-input--error" if params.error %}
+
+<div class="wmre-fe-group{{groupErrorClass}}">
+  {{
+    wmreLabel({
+      label: 'Input label',
+      for: id
+    }) | trim
+  }}
+  {% if params.error -%}
+    {{
+      wmreFeErrorMessage() | trim
+    }}
+  {% endif -%}
+  <input class="wmre-fe-input{{errorClass}}" id="{{id}}" name="{{id}}" type="text"/>
+</div>
+
+{% endmacro %}]

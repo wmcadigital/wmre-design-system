@@ -1,0 +1,150 @@
+{% extends "www/_layouts/layout-fullwidth.njk" %}
+{% set pageTitle = "West Midlands Rail Executive<br/>Design System" %}
+{% set section = 'Home' %}
+{# Imports #}
+{%- from "wmre/components/content-tiles/normal/_normal.njk" import wmreContentTilesNormal -%}
+{%- from "wmre/components/link/link/_link.njk" import wmreLink -%}
+
+
+{% block content %}
+<div class="wmre-grid wmre-grid--align-center">
+  {# Overview #}
+  <div class="wmre-col-1 wmre-col-xl-3-4">
+    <div class="wmre-col-md-3-4">
+      <h2>Overview</h2>
+      <p>
+        The West Midlands Rail Executive (WMRE) Design System is a library of typography, visual styles and user interface components which are documented and updated continuously.
+      </p>
+      <p>
+        Use the WMRE Design System to make your service or application consistent with WMRE design and styles.
+      </p>
+      <p>
+        Our design system aims to be platform/framework agnostic. This allows designers and developers from all practices to utilise our design system and avoid repeating work that's already been done.
+      </p>
+    </div>
+  </div>
+  {# Design system links #}
+  <div class="wmre-col-1 wmre-col-xl-1-4">
+    <h2>Contribute</h2>
+    {# Github code repo #}
+    <p>
+      <a href="https://github.com/wmcadigital/wmre-design-system" target="_blank" rel="noopener noreferrer">
+       <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="wmre-website-homepage-icons svg-inline--fa fa-github fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>Github code repository
+      </a>
+    </p>
+    {# XD designs #}
+    <p>
+      <a href="https://xd.adobe.com/spec/7d6f1a80-0be4-4551-6405-cf6e3da2fa66-0b5e/screen/c2d34ea2-3cae-4e04-b7c0-c69789077fcb/" target="_blank" rel="noopener noreferrer">
+        <svg class="wmre-website-homepage-icons" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 307.7 300" style="enable-background:new 0 0 307.7 300;" xml:space="preserve"><style type="text/css">.st0{fill:#2E001E;}.st1{fill:#FF2BC2;}</style><path class="st0" d="M12.8,12.8h282.1v274.4H12.8V12.8z"/><path class="st1" d="M0,0v300h307.7V0H0z M12.8,12.8h282.1v274.4H12.8V12.8z"/><path class="st1" d="M223.5,126c-2.4-1-4.9-1.4-7.4-1.3c-16.2,0-26.9,12.4-26.9,33.1c0,23.6,11,33.1,25.4,33.1c3,0.1,6-0.4,8.8-1.4	V126H223.5z M166,158.8c0-29.9,19.2-53.2,50.8-53.2c2.2,0,4.5,0,6.7,0.3V72.6c0-0.7,0.6-1.3,1.3-1.3h20.6c1,0,1.3,0.4,1.3,1v117.2	c-0.1,4.2,0.1,8.4,0.6,12.6c0,0.9,0,1-0.8,1.4c-10.3,4.9-21.5,7.4-32.8,7.4C185.9,210.9,166,193.7,166,158.8L166,158.8z	 M122.3,138.1l35.9,69.6c0.6,1,0.3,2.1-0.8,2.1h-22.3c-1.2,0.1-2.3-0.5-2.7-1.7c-8.2-16.9-16.6-34.5-25.1-52.7h-0.3	c-7.7,17.2-16.2,35.9-24.4,52.8c-0.4,0.9-1.3,1.4-2.3,1.4H59.1c-1.3,0-1.4-1-0.8-1.8l35.1-67.6l-34-67.2c-0.4-0.4-0.4-1.2,0-1.6	c0.2-0.2,0.6-0.3,0.9-0.3h22c1.3,0,1.9,0.3,2.3,1.4c8.1,17.1,16.3,33.8,24,51h0.3c7.4-16.9,15.6-34,23.5-50.8c0.6-1,1-1.7,2.3-1.7	h20.6c1,0,1.4,0.8,0.8,1.9L122.3,138.1z"/></svg>XD designs
+      </a>
+    </p>
+    {# Contribute to design system #}
+    <p>
+      <a href="https://github.com/wmcadigital/wmre-design-system/blob/master/doc/contributing.md" target="_blank" rel="noopener noreferrer">
+       <svg aria-hidden="true" data-prefix="far" data-icon="lightbulb-on" class="wmre-website-homepage-icons svg-inline--fa fa-lightbulb-on fa-w-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M112 192a24 24 0 00-24-24H24a24 24 0 000 48h64a24 24 0 0024-24zm-4.92 95.22l-55.42 32a24 24 0 1024 41.56l55.42-32a24 24 0 00-24-41.56zm24-232l-55.42-32a24 24 0 10-24 41.56l55.42 32a24 24 0 1024-41.56zM520.94 100a23.8 23.8 0 0012-3.22l55.42-32a24 24 0 00-24-41.56l-55.42 32a24 24 0 0012 44.78zM616 168h-64a24 24 0 000 48h64a24 24 0 000-48zm-27.66 151.23l-55.42-32a24 24 0 10-24 41.56l55.42 32a24 24 0 0024-41.56zM320 0C217.72 0 144 83 144 176a175 175 0 0043.56 115.78c16.63 19 42.75 58.8 52.41 92.16v.06h48v-.12a47.67 47.67 0 00-2.13-14.07C280.25 352 263 305.06 223.66 260.15a127.48 127.48 0 01-31.6-84.15C191.84 102.36 251.72 48 320 48a127.91 127.91 0 0196.34 212.15c-39.09 44.61-56.4 91.47-62.09 109.46a56.78 56.78 0 00-2.25 14.31v.08h48c9.69-33.37 35.78-73.18 52.41-92.15A175.93 175.93 0 00320 0zm0 80a96.11 96.11 0 00-96 96 16 16 0 0032 0 64.08 64.08 0 0164-64 16 16 0 000-32zm-79.94 379.19a16 16 0 002.69 8.84l24.5 36.83a16 16 0 0013.31 7.14h78.85a16 16 0 0013.34-7.14l24.5-36.86a16.2 16.2 0 002.69-8.84L400 416H240z"/></svg>Contribute to our design system
+      </a>
+    </p>
+    {# Report an issue #}
+    <p>
+      <a href="https://github.com/wmcadigital/wmre-design-system/issues" target="_blank" rel="noopener noreferrer">
+        <svg aria-hidden="true" data-prefix="fas" data-icon="bug" class="wmre-website-homepage-icons svg-inline--fa fa-bug fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M511.988 288.9c-.478 17.43-15.217 31.1-32.653 31.1H424v16c0 21.864-4.882 42.584-13.6 61.145l60.228 60.228c12.496 12.497 12.496 32.758 0 45.255-12.498 12.497-32.759 12.496-45.256 0l-54.736-54.736C345.886 467.965 314.351 480 280 480V236c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v244c-34.351 0-65.886-12.035-90.636-32.108l-54.736 54.736c-12.498 12.497-32.759 12.496-45.256 0-12.496-12.497-12.496-32.758 0-45.255l60.228-60.228C92.882 378.584 88 357.864 88 336v-16H32.666C15.23 320 .491 306.33.013 288.9-.484 270.816 14.028 256 32 256h56v-58.745l-46.628-46.628c-12.496-12.497-12.496-32.758 0-45.255 12.498-12.497 32.758-12.497 45.256 0L141.255 160h229.489l54.627-54.627c12.498-12.497 32.758-12.497 45.256 0 12.496 12.497 12.496 32.758 0 45.255L424 197.255V256h56c17.972 0 32.484 14.816 31.988 32.9zM257 0c-61.856 0-112 50.144-112 112h224C369 50.144 318.856 0 257 0z"/></svg>Report an issue
+      </a>
+    </p>
+  </div>
+</div>
+{# Internal navigation #}
+<h2>Design System</h2>
+<div class="wmre-grid">
+  {# Styles #}
+  <div class="wmre-col-1 wmre-col-sm-1-2 wmre-col-lg-1-4 wmre-p-xs">
+    {{
+      wmreContentTilesNormal({
+        classModifiers: 'wmre-content-tile--with-one-link',
+        title: "Styles",
+        copy: "<p>Make your service look and feel like WMRE: colours, icons, typography and utility classes</p>",
+        smallTitle: true,
+        readMore: true,
+        link: '$*baseUrl/styles/',
+        linkText: 'Read more about styles',
+        linkTitle: 'Styles'
+      })
+    }}
+  </div>
+  {# Components #}
+  <div class="wmre-col-1 wmre-col-sm-1-2 wmre-col-lg-1-4 wmre-p-xs">
+    {{
+      wmreContentTilesNormal({
+        classModifiers: 'wmre-content-tile--with-one-link',
+        title: "Components",
+        copy: "<p>Reusable parts of the user interface: content, map and form elements; buttons and messages</p>",
+        smallTitle: true,
+        readMore: true,
+        link: '$*baseUrl/components/',
+        linkText: 'Read more about components',
+        linkTitle: 'Components'
+      })
+    }}
+  </div>
+  {# Patterns #}
+  <div class="wmre-col-1 wmre-col-sm-1-2 wmre-col-lg-1-4 wmre-p-xs">
+    {{
+      wmreContentTilesNormal({
+        classModifiers: 'wmre-content-tile--with-one-link',
+        title: "Patterns",
+        copy: "<p>Commonly used sets of components</p>",
+        smallTitle: true,
+        readMore: true,
+        link: '$*baseUrl/patterns/',
+        linkText: 'Read more about patterns',
+        linkTitle: 'Patterns'
+      })
+    }}
+  </div>
+</div>
+
+<br>
+{# Quick start #}
+<h2>Quick start</h2>
+
+<h3>Web projects</h3>
+<p class="wmre-col-md-3-4">
+  Getting started is as simple as including West Midlands Rail Executive Design System's minified CSS file and adding <code class="wmre-website-inline-code">.wmre-html</code> to the html element in your service/application.
+</p>
+<pre>
+  <code class="html wmre-show-more-ignore">
+  {%- filter forceescape %}
+  <!DOCTYPE html>
+  <html lang="en-gb" class="wmre-html">
+    <head>
+      <!-- CSS for WMRE Design System -->
+      <link rel="stylesheet" href="$*cdn/css/wmre-components.min.css" />
+    </head>
+    <body>
+      <!-- site content... -->
+    </body>
+  </html>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<h3>Want to use our icons, or using a component that references an icon?</h3>
+<p>Please see the
+  {{
+    wmreLink({
+      link: "$*baseUrl/styles/icons/",
+      linkTitle: "Using WMRE Design System icons",
+      text: "icons page"
+    })
+  }}.
+</p>
+
+<h3>Mobile app projects (React Native)</h3>
+<p>If you are using React Native, you can import our styles like below.</p>
+<pre>
+  <code class="javascript">
+    {% filter forceescape %}// Import react native styles for WMRE Design System
+    import wmreStyles from "$*cdn/css/react-native/wmre-components.min.js"
+    {%- endfilter %}
+  </code>
+</pre>
+{% endblock %}

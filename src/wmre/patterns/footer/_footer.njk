@@ -1,0 +1,15 @@
+{% macro wmreFooter(params) %}
+{% set appClass = " wmre-footer--mobile-app" if params.app else "" %}
+
+<footer class="wmre-footer{{appClass}}">
+  <div class="wmre-container wmre-grid">
+    <div class="wmre-col-1 wmre-col-md-1-2">
+      Copyright West Midlands Rail Executive &copy; 2020
+    </div>
+    <div class="wmre-col-1 wmre-col-md-1-2">
+      <a href="https://www.wmca.org.uk/policies" title="Privacy and cookies policy" target="_blank" rel="noopener noreferrer" class="wmre-footer__link wmre-link">Privacy &amp; Cookies Policy</a>
+    </div>
+  </div>
+</footer>
+
+{% endmacro %}

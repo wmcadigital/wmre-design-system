@@ -1,0 +1,73 @@
+{
+  "navItems": [
+    {
+      "name": "Styles",
+      "subnavItems": [
+        {
+          "name": "Colour palettes"
+        },
+        {
+          "name": "Typography"
+        },
+        {
+          "name": "Icons"
+        },
+        {
+          "name": "Utility classes"
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "subnavItems": [
+        {
+          "name": "Breadcrumb"
+        },
+        {
+          "name": "Buttons"
+        },
+        {
+          "name": "Content Tiles"
+        },
+        {
+          "name": "Form elements"
+        },
+        {
+          "name": "Links"
+        },
+        {
+          "name": "Loader"
+        },
+        {
+          "name": "Phase indicator"
+        }
+      ]
+    },
+    {
+      "name": "Patterns",
+      "subnavItems": [
+        {
+          "name": "Header and footer"
+        }
+      ]
+    }
+  ],
+  "colors": {
+    "brand": [
+      { "varName": "primary", "name": "Primary Teal" },
+      { "varName": "secondary", "name": "Secondary Grey" }
+    ],
+    "web": [
+      { "varName": "typography", "name": "Text" }
+    ],
+    "backgroundOnly": [
+      { "varName": "bgHeader", "name": "Header" },
+      { "varName": "bgBreadcrumb", "name": "Breadcrumb" },
+      { "varName": "bgFooter", "name": "Footer" },
+      { "varName": "background", "name": "Background" }
+    ],
+    "typography": [
+      { "varName": "typography", "name": "Typography" }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{% macro wmreTextarea(params) %}
+
+{# Imports #}
+{% from "wmre/components/form-elements/label/_label.njk" import wmreLabel %}
+
+{# Params #}
+{% set id = params.id if params.id else "textarea" %}
+
+<div class="wmre-fe-group">
+  {{
+    wmreLabel({
+      label: 'Textarea label',
+      for: id
+    }) | trim
+  }}
+  <textarea  class="wmre-fe-textarea" id="{{id}}" name="{{id}}" rows="3"></textarea>
+</div>
+
+{% endmacro %}

@@ -1,0 +1,25 @@
+{% macro wmreDropdown(params) %}
+
+{# Imports #}
+{% from "wmre/components/form-elements/label/_label.njk" import wmreLabel %}
+
+{# Params #}
+{% set id = params.id if params.id else "dropdown" %}
+<div class="wmre-fe-group">
+  <div class="wmre-fe-dropdown">
+    {{
+      wmreLabel({
+        label: 'Dropdown label',
+        for: id
+      }) | trim
+    }}
+    <select class="wmre-fe-dropdown__select" id="{{id}}" name="{{id}}">
+      <option value="" selected="selected">Choose from list</option>
+      {%- for i in range(1,6) %}
+      <option value="{{i}}">Option {{i}}</option>
+      {%- endfor %}
+    </select>
+  </div>
+</div>
+
+{% endmacro %}

@@ -1,0 +1,14 @@
+{% extends "www/_layouts/_master-layout.njk" %}
+
+{% block body %}
+<div class="wmre-grid">
+  <div class="wmre-col-1 wmre-col-md-1-4">
+    {% include "www/_partials/nav/subnav.njk" %}
+  </div>
+  <div class="wmre-col-1 wmre-col-md-3-4" id="wmre-main-content">
+    <h1>{{ pageTitle }}</h1>
+    <hr>
+    {% block content %}{% endblock content %}
+  </div>
+</div>
+{% endblock body%}
