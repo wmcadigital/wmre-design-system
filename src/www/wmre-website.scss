@@ -17,3 +17,26 @@
   background: $white;
   @include type-setting(4);
 }
+
+// Fix gh-pages styling issues 
+h1 {
+  position: initial !important;
+  left: 0 !important;
+  width: 100% !important;
+  margin: 0 0 50px 0 !important;
+  font-size: 3rem !important;
+  font-weight: 600 !important;
+  letter-spacing: inherit !important;
+  line-height: 3rem !important;
+  text-shadow: none !important;
+}
+
+li {
+  display: inline-block !important;
+  width: initial !important;
+  font-weight: bold;
+}
+
+.sub-nav {
+  display: grid !important;
+}
