@@ -18,7 +18,6 @@ function minifyJS(jsFile) {
         }
       })
     )
-    .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
     .pipe(
       webpack({
         config: {
@@ -43,6 +42,7 @@ function minifyJS(jsFile) {
       })
     )
     .pipe(plugins.plumber.stop())
+    .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
     .pipe(dest(paths.scripts.output)); // Spit out concat + minified file in ./build/
 }
 
