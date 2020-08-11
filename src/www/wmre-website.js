@@ -5,7 +5,7 @@ import highlightJS from './_partials/component-example/_component-example';
 const icons = () => {
   // Ajax SVG in, SVGS are referenced in app (Icon component)
   const ajax = new XMLHttpRequest();
-  ajax.open('GET', '$*cdn/img/wmre-sprite.min.svg', true);
+  ajax.open('GET', '/img/wmre-sprite.min.svg', true);
   ajax.send();
   ajax.onload = () => {
     const div = document.createElement('div');
