@@ -5,6 +5,7 @@
 {% set class = ' ' + params.classModifiers if params.classModifiers %}
 {% set title = params.title if params.title else "CTA Title" %} {# set title #}
 {% set img = params.img if params.img else "$*cdn/img/tiles/card-1-image.svg" %} {# set default img #}
+{% set imgalt = params.imgalt if params.imgalt else "title of image" %} {# set default img alt tag #}
 
 
 <div class="wmre-content-tile{{class}}">
@@ -31,6 +32,6 @@
     
   {%- endif %}
   {{ wmreLink({text: 'Read more'}) | indent(8) | trim }}
-  <img src="{{ img }}" />
+  <img src="{{ img }}" alt="{{ imgalt }}" />
 </div>
 {% endmacro %}
