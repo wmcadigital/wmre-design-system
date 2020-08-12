@@ -8,8 +8,8 @@
 
   {% set endUrl = sectionItem.url if sectionItem.url else sectionItem.name | lower | replace(" ", "-") %}
 
-  <li>
-    <a class="wmre-col-1 wmre-link"
+  <li class="wmre-col-1">
+    <a class="wmre-link"
       href="$*baseUrl/{{ navItem.name | lower | replace(" ", "-") }}/{{endUrl}}/">{{ sectionItem.name}}</a>
   </li>
   {% endfor %}
