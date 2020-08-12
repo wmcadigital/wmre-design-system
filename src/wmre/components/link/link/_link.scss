@@ -3,9 +3,10 @@
 // The a[class*="wmre-col-"] line is to orrived the above not line, as a wmre-col tag as an 'a' is fine to treat as normal tag
 a:not([class*="wmre-"]),
 .wmre-link {
-  color: get-color(cta, 10, dark);
-  font-weight: bold;
-  text-decoration: underline;
+  color: get-color(typography);
+  font-weight: normal;
+  text-decoration: none;
+  border-bottom: 2px solid get-color(primary);
   cursor: pointer;
 
   &:visited {
