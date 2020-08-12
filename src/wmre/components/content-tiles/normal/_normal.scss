@@ -1,12 +1,16 @@
 .wmre-content-tile {
   height: 100%;
-  padding: $size-sm;
   background-color: $white;
   box-shadow: 4px 7px 5px rgba($black, 0.16);
 
-  &__legend {
-    padding-left: $size-sm;
-    border-left: 3px solid get-color(information);
+  &--normal {
+    padding: $size-sm;
+  }
+
+  &__category {
+    display: block;
+    padding: $size-md;
+    text-align: right;
   }
 
   &__copy {
