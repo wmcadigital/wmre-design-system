@@ -1,0 +1,36 @@
+{% macro wmreContentTilesCta(params) %}
+{# Imports #}
+{%- from "wmre/components/link/link/_link.njk" import wmreLink -%}
+{# Set vars #}
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+{% set title = params.title if params.title else "CTA Title" %} {# set title #}
+{% set img = params.img if params.img else "$*cdn/img/tiles/card-1-image.svg" %} {# set default img #}
+
+
+<div class="wmre-content-tile{{class}}">
+  {#- Category -#}
+  {%- if params.category %}
+    <span class="wmre-content-tile__category">
+      {{ params.category }}
+    </span>
+  {%- endif %}
+
+  {#- Title #}
+  {%- if params.smallTitle %}
+    <h3>{{ title }}</h3>
+  {%- else %}
+    <h2>{{ title }}</h2>
+  {%- endif %}
+
+  {%- if params.copy %}
+    {#- Copy #}
+    <div class="wmre-content-tile__copy">
+      {{ params.copy | safe | trim  -}}
+    </div>
+  {%- else %}
+    
+  {%- endif %}
+  {{ wmreLink({text: 'Read more'}) | indent(8) | trim }}
+  <img src="{{ img }}" />
+</div>
+{% endmacro %}

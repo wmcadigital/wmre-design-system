@@ -5,6 +5,7 @@
 {% block content %}
 {# Content tile small 1 #}
 {%- from "wmre/components/content-tiles/normal/_normal.njk" import wmreContentTilesNormal -%}
+{%- from "wmre/components/content-tiles/cta/_cta.njk" import wmreContentTilesCta -%}
 
 <h2>Normal</h2>
 <h3>General </h3>
@@ -18,13 +19,16 @@
   ])
 }}
 
-<h3>General with one link</h3>
+<h2>Homepage</h2>
+<h3>Call To Action's</h3>
 {{
   compExample([
-    wmreContentTilesNormal({
-      classModifiers: 'wmre-content-tile--with-one-link',
-      copy: '<p>See all major roadworks and events. These could affect your journey, plan ahead.</p>',
-      readMore: true
+    wmreContentTilesCta({
+      classModifiers: 'wmre-content-tile--cta',
+      category: 'Category',
+      title: 'West Midlands Rail Investment Strategy',
+      copy: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>',
+      img: '$*cdn/img/tiles/card-1-image.svg'
     })
   ])
 }}
