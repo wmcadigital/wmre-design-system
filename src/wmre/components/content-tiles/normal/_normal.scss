@@ -1,20 +1,19 @@
 .wmre-content-tile {
   height: 100%;
-  padding: $size-sm;
   background-color: $white;
-  box-shadow: 4px 7px 5px rgba($black, 0.16);
+  box-shadow: 0 3px 6px 0 rgba($black, 0.16);
 
-  &__legend {
-    padding-left: $size-sm;
-    border-left: 3px solid get-color(information);
+  &--normal {
+    padding: $size-sm;
+  }
+
+  &__category {
+    display: block;
+    padding: $size-md;
+    text-align: right;
   }
 
   &__copy {
-    // Constraints for iframe
-    iframe {
-      width: 100%;
-    }
-
     .wmre-link {
       position: absolute;
       right: $size-sm;
@@ -30,7 +29,7 @@
   // One main link modifier
   &--with-one-link {
     position: relative;
-    padding-bottom: $size-lg;
+    padding: $size-sm $size-sm $size-lg $size-sm;
   }
 
   // Nav modifier
