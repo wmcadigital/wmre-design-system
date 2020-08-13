@@ -1,0 +1,40 @@
+{% macro wmreContentTilesTeam(params) %}
+{# Imports #}
+{%- from "wmre/components/link/link/_link.njk" import wmreLink -%}
+{# Set vars #}
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+{% set name = params.name if params.name else "Name Surname" %} {# set name #}
+{% set job = params.job if params.job else "Job Title" %} {# set job title #}
+{% set img = params.img if params.img else "$*cdn/img/tiles/placeholder-600x400.svg" %} {# set default img #}
+{% set imgalt = params.imgalt if params.imgalt else "title of image" %} {# set default img alt tag #}
+
+<article class="wmre-content-tile{{class}}">
+  <div class="wmre-content-tile--team__overlay">
+    <div class="overlay-text">
+        <h2>Name Surname</h2>
+        <p class="job-title">Job title</p>
+        <p class="bio">Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        </p>
+        <div class="share-logo pure-g">
+            <a href="#" target="_blank" class="social">
+              <img src="$*cdn/img/social/twitter-green-logo.png" alt="twitter">
+            </a>
+            <a href="#" target="_blank" class="social">
+              <img src="$*cdn/img/social/linkedin-green-logo.png" alt="linkedin">
+            </a>
+        </div>
+    </div>
+</div>
+  <img src="{{ img }}" alt="{{ imgalt }}" />
+  <div class="wmre-content-tile--team__copy">
+  {#- Name #}
+  <h2>{{ name }}</h2>
+
+  {#- Job Title #}
+  <span>{{ job }}</span>
+
+  </div>
+</article>
+
+{% endmacro %}

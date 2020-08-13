@@ -1,7 +1,7 @@
 // Included the a tag too incase dev forgets to add .wmre-link class.
 // The a:not([class*="wmre-"]) line makes sure we don't target any wmre components that are using the a tag such as a button as a link
 // The a[class*="wmre-col-"] line is to orrived the above not line, as a wmre-col tag as an 'a' is fine to treat as normal tag
-a:not([class*="wmre-"]):not(.tile),
+a:not([class*="wmre-"]):not(.tile):not(.social),
 .wmre-link {
   border-bottom: 2px solid get-color(primary);
   color: get-color(typography);

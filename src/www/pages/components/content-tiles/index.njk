@@ -8,6 +8,7 @@
 {%- from "wmre/components/content-tiles/cta/_cta.njk" import wmreContentTilesCta -%}
 {%- from "wmre/components/content-tiles/news/_news.njk" import wmreContentTilesNews -%}
 {%- from "wmre/components/content-tiles/project/_project.njk" import wmreContentTilesProjects -%}
+{%- from "wmre/components/content-tiles/team/_team.njk" import wmreContentTilesTeam -%}
 
 <h2>Normal</h2>
 <h3>General </h3>
@@ -57,6 +58,16 @@
       title: 'Project title',
       location: 'Wolverhampton',
       status: 'In Progress'
+    })
+  ])
+}}
+
+<h3>Team</h3>
+{{
+  compExample([
+    wmreContentTilesTeam({
+      classModifiers: 'wmre-content-tile--team',
+      name: 'Name Surname'
     })
   ])
 }}
