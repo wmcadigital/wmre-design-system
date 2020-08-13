@@ -2,7 +2,7 @@
   &--team {
     position: relative;
 
-    &__overlay {
+    &--overlay {
       display: inline-block;
       position: absolute;
       height: 100%;
@@ -10,18 +10,7 @@
       opacity: 0;
       background-color: get-color(secondary);
 
-      h4,
-      p {
-        padding-top: 10px;
-        color: $white;
-      }
-
-      .job-title {
-        padding: 0;
-        color: get-color(primary);
-      }
-
-      .overlay-text {
+      &--text {
         padding: 0 40px 10px 40px;
 
         h2 {
@@ -31,21 +20,24 @@
           text-align: center;
         }
 
-        p {
-          margin: 0;
-          text-align: center;
-        }
-
-        .bio {
+        &__bio {
           margin: 0 0 15px 0;
           text-align: left;
         }
 
-        .share-logo {
-          img {
-            margin-right: 5px;
-          }
-        }
+      }
+
+      h4,
+      p {
+        padding-top: 10px;
+        color: $white;
+      }
+
+      .job-title {
+        margin: 0;
+        padding: 0;
+        color: get-color(primary);
+        text-align: center;
       }
 
       &:hover {
