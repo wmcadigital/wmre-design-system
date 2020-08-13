@@ -1,25 +1,24 @@
 .wmre-content-tile {
   &--news {
+    position: relative;
     height: 350px;
-    padding-bottom: 15px;
+    padding: 0;
     overflow: hidden;
 
     &__news-triangle {
-      max-width: 290px;
-      height: 270px;
-      margin-top: -175px;
-      margin-left: -7px;
+      width: 100%;
+      margin: -175px 0 0 0;
+      padding: 0;
     }
 
     h2 {
-      margin: $size-sm 0;
+      margin: $size-md 0;
       font-size: 1.2rem;
       line-height: 1.5rem;
     }
 
     &__copy {
       position: relative;
-      height: 100px;
       margin-top: -180px;
       padding: 0 15px;
       background: transparent;
@@ -44,7 +43,7 @@
 .wmre-content-tile--news:hover {
   .wmre-content-tile--news__news-triangle {
     height: 310px;
-    margin-top: -280px;
+    margin-top: -360px;
   }
 
   .wmre-content-tile--news__copy {
