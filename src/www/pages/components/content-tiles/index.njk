@@ -6,6 +6,7 @@
 {# Content tile small 1 #}
 {%- from "wmre/components/content-tiles/normal/_normal.njk" import wmreContentTilesNormal -%}
 {%- from "wmre/components/content-tiles/cta/_cta.njk" import wmreContentTilesCta -%}
+{%- from "wmre/components/content-tiles/news/_news.njk" import wmreContentTilesNews -%}
 
 <h2>Normal</h2>
 <h3>General </h3>
@@ -29,6 +30,19 @@
       title: 'West Midlands Rail Investment Strategy',
       copy: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>',
       img: '$*cdn/img/tiles/card-1-image.svg'
+    })
+  ])
+}}
+
+<h2>General</h2>
+<h3>News Articles</h3>
+{{
+  compExample([
+    wmreContentTilesNews({
+      classModifiers: 'wmre-content-tile--news',
+      category: 'Category',
+      title: 'West Midlands Rail Investment Strategy',
+      copy: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>'
     })
   ])
 }}
