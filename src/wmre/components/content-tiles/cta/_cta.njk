@@ -8,7 +8,7 @@
 {% set imgalt = params.imgalt if params.imgalt else "title of image" %} {# set default img alt tag #}
 
 
-<div class="wmre-content-tile{{class}}">
+<article class="wmre-content-tile{{class}}">
   {#- Category -#}
   {%- if params.category %}
     <span class="wmre-content-tile__category">
@@ -33,5 +33,5 @@
   {%- endif %}
   {{ wmreLink({text: 'Read more'}) | indent(8) | trim }}
   <img src="{{ img }}" alt="{{ imgalt }}" />
-</div>
+</article>
 {% endmacro %}

@@ -11,7 +11,7 @@
 {% set linkTarget = params.linkTarget if params.linkTarget else "_self" %} {# set link target #}
 
 
-<div class="wmre-content-tile{{class}}">
+<article class="wmre-content-tile{{class}}">
   {#- Title #}
   <h2>{{ title }}</h2>
 
@@ -21,5 +21,5 @@
       {{ params.copy | safe | trim  -}}
     </div>
   {%- endif %}
-</div>
+</article>
 {% endmacro %}
