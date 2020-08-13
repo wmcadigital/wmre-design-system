@@ -14,11 +14,6 @@
   }
 
   &__copy {
-    // Constraints for iframe
-    iframe {
-      width: 100%;
-    }
-
     .wmre-link {
       position: absolute;
       right: $size-sm;
@@ -34,7 +29,7 @@
   // One main link modifier
   &--with-one-link {
     position: relative;
-    padding-bottom: $size-lg;
+    padding: $size-sm $size-sm $size-lg $size-sm;
   }
 
   // Nav modifier
