@@ -7,6 +7,7 @@
 {%- from "wmre/components/content-tiles/normal/_normal.njk" import wmreContentTilesNormal -%}
 {%- from "wmre/components/content-tiles/cta/_cta.njk" import wmreContentTilesCta -%}
 {%- from "wmre/components/content-tiles/news/_news.njk" import wmreContentTilesNews -%}
+{%- from "wmre/components/content-tiles/project/_project.njk" import wmreContentTilesProjects -%}
 
 <h2>Normal</h2>
 <h3>General </h3>
@@ -43,6 +44,32 @@
       category: 'Category',
       title: 'West Midlands Rail Investment Strategy',
       copy: '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>'
+    })
+  ])
+}}
+
+<h3>Projects - Small</h3>
+{{
+  compExample([
+    wmreContentTilesProjects({
+      classModifiers: 'wmre-content-tile--project',
+      category: 'Category',
+      title: 'Project title',
+      location: 'Wolverhampton',
+      status: 'In Progress'
+    })
+  ])
+}}
+
+<h3>Projects - Small</h3>
+{{
+  compExample([
+    wmreContentTilesProjects({
+      classModifiers: 'wmre-content-tile--project',
+      category: 'Category',
+      title: 'Project title',
+      location: 'Wolverhampton',
+      status: 'In Progress'
     })
   ])
 }}
