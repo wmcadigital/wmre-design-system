@@ -1,6 +1,6 @@
 {
   "name": "wmre-design-system",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "A library of typography, visual styles and user interface components which are documented for West Midlands Rail Executive.",
   "homepage": "https://wmcadigital.github.io/wmre-design-system",
   "author": "WMCA",
@@ -48,7 +48,7 @@
     "build:ghpages": "npm run build:all --build=ghpages"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.10.4",
     "autoprefixer": "^9.8.4",
     "babel-eslint": "^10.1.0",
