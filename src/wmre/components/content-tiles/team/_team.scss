@@ -6,9 +6,9 @@
       display: inline-block;
       position: absolute;
       height: 100%;
-      transition: 0.5s ease;
       opacity: 0;
       background-color: get-color(secondary);
+      transition: 0.5s ease;
 
       &--text {
         padding: 0 40px 10px 40px;
