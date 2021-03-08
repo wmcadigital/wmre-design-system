@@ -1,0 +1,35 @@
+{% macro wmreCookiesBanner(params) %}
+
+{# Imports of components #}
+{% from "wmre/components/button/_button.njk" import wmreButton as primary %}
+{%- from "wmre/components/link/as-button/_as-button.njk" import wmreLinkAsButton as cta %}
+
+
+<div class="bg-white wmre-p-t-md wmre-p-b-md wmre-cookies-banner">
+  <div class="wmre-container">
+    <div class="wmre-col-1 wmre-col-md-3-4 wmre-col-lg-2-3">
+      <h3>Your privacy settings</h3>
+      <p>
+        If you’re happy with the use of cookies by West Midlands Combined Authority
+        and our selected partners, click ‘Accept all cookies’. Or click ‘Manage cookies’ to learn more.
+      </p>
+      <div class="wmre-grid wmre-grid--justify-between wmre-cookies-banner__group-buttons">
+        {{
+          primary({
+            classNames: "wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24  wmre-cookies-banner__accept-all-cookies",
+            text: "Accept all cookies"
+          }) | trim | indent(8)
+        }}
+        {{
+          cta({
+            text: "Manage Cookies",
+            classNames: "wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24",
+            link: "/patterns/cookies/#cookies_manager"
+          }) | trim | indent(8)
+        }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}
