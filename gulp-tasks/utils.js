@@ -12,7 +12,7 @@ switch (process.env.npm_config_build) {
     build = 'staging';
     break;
   default:
-    build = 'local';
+    build = 'ghpages';
     break;
 }
 

@@ -5,27 +5,33 @@
         security.
       </p>
     <![endif]--> <a href="#wmre-main-content" title="Skip to main content" target="_self" class="wmre-link wmre-header__skip-link">Skip to main content</a><header class="wmre-header"><div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between"><div class="wmre-header__vertical-align wmre-col-auto"><a class="wmre-header__logo-link" href="https://wmcadigital.github.io/wmre-design-system/" title="West Midlands Rail Executive Design System"><img class="wmre-header__logo" alt="West Midlands Rail Executive logo" src="https://wmcadigital.github.io/wmre-design-system/img/logo.svg"> </a><a href="https://wmcadigital.github.io/wmre-design-system/" target="_self" class="wmre-phase-indicator" title="Beta homepage of West Midlands Rail Executive Design System">Beta</a></div><nav class="wmre-header__vertical-align wmre-col-auto"><ul class="wmre-header__links wmre-header__main-links"><li class="wmre-header__link"><a href="https://wmcadigital.github.io/wmre-design-system/styles/" title="Styles page" target="_self" class="wmre-link">Styles</a></li><li class="wmre-header__link"><a href="https://wmcadigital.github.io/wmre-design-system/components/" title="Components page" target="_self" class="wmre-link">Components</a></li><li class="wmre-header__link"><a href="https://wmcadigital.github.io/wmre-design-system/patterns/" title="Patterns page" target="_self" class="wmre-link">Patterns</a></li></ul></nav></div></header><div class="wmre-breadcrumb"><div class="wmre-container"><nav aria-label="Breadcrumb"><ol class="wmre-breadcrumb__list"><li class="wmre-breadcrumb__list-item"><a href="https://wmcadigital.github.io/wmre-design-system/" class="wmre-breadcrumb__link">Home</a></li><li class="wmre-breadcrumb__list-item"><a href="https://wmcadigital.github.io/wmre-design-system/styles/" class="wmre-breadcrumb__link">Styles</a></li><li class="wmre-breadcrumb__list-item"><a href="https://wmcadigital.github.io/wmre-design-system/styles/utility-classes/" class="wmre-breadcrumb__link wmre-breadcrumb__link--current" aria-current="page">Utility classes</a></li></ol></nav></div></div><main class="wmre-container wmre-container--main"><div class="wmre-grid"><div class="wmre-col-1 wmre-col-md-1-4"><ul class="sub-nav"><li class="wmre-col-1"><a class="wmre-link" href="https://wmcadigital.github.io/wmre-design-system/styles/colour-palettes/">Colour palettes</a></li><li class="wmre-col-1"><a class="wmre-link" href="https://wmcadigital.github.io/wmre-design-system/styles/icons/">Icons</a></li><li class="wmre-col-1"><a class="wmre-link" href="https://wmcadigital.github.io/wmre-design-system/styles/typography/">Typography</a></li><li class="wmre-col-1"><a class="wmre-link" href="https://wmcadigital.github.io/wmre-design-system/styles/utility-classes/">Utility classes</a></li></ul></div><div class="wmre-col-1 wmre-col-md-3-4" id="wmre-main-content"><h1>Utility classes</h1><hr><h2>About</h2><p>There are a variety of utility classes that can be used with the existing components and styles on.</p><hr><h2>Containers</h2><p>Containers are used to wrap content in a 'container'. The container will have a fixed max size and be centered on the page, it will adjust to 100% width when the page width is less than the container size.</p><pre class="wmre-col-1">
-  <code class="scss">
+  <code class="scss" tabindex="0">
     .wmre-container /* Container with max-width of 1280px */
 
     /* This should be used on your main content section and will
     add a margin top to seperate from header/breadcrumb section */
     .wmre-container.wmre-container--main
   </code>
-</pre><hr><h2>Grid</h2><p>The WMRE Design System uses its own custom syntax grid system adopted from <a href="https://purecss.io/grids/" target="_blank" class="wmre-link">Pure CSS Grid</a>. The grid system is already included in the bundled wmre-components.min.css file so you don't need to include it seperately.</p><p>You can Refer to the <a href="https://purecss.io/grids/" target="_blank" class="wmre-link">Pure CSS Grid documentation</a> for reference on how to use our grid system, but bear in mind that:</p><ul><li><code class="wmre-website-inline-code">.pure-g</code> becomes <code class="wmre-website-inline-code">.wmre-grid</code> in our design system<br><br></li><li><code class="wmre-website-inline-code">.pure-u-*</code> becomes <code class="wmre-website-inline-code">.wmre-col-*</code> in our design system</li></ul><p>You can also use the below modifier classes on the same element where the class <code class="wmre-website-inline-code">.wmre-grid</code> is being used.</p><pre class="wmre-col-1">
-  <code class="scss">
+</pre><hr><h2>Grid</h2><p>The WMN Design System uses its own custom syntax grid system adopted from <a href="https://purecss.io/grids/" target="_blank" class="wmre-link">Pure CSS Grid</a>. The grid system is already included in the bundled wmre-components.min.css file so you don't need to include it seperately.</p><p>You can Refer to the <a href="https://purecss.io/grids/" target="_blank" class="wmre-link">Pure CSS Grid documentation</a> for reference on how to use our grid system, but bear in mind that:</p><ul><li><code class="wmre-website-inline-code">.pure-g</code> becomes <code class="wmre-website-inline-code">.wmre-grid</code> in our design system<br><br></li><li><code class="wmre-website-inline-code">.pure-u-*</code> becomes <code class="wmre-website-inline-code">.wmre-col-*</code> in our design system</li></ul><p>You can also use modifier classes on the same element where the class <code class="wmre-website-inline-code">.wmre-grid</code> is being used.</p><pre class="wmre-col-1">
+  <code class="scss" tabindex="0">
     .wmre-grid--justify-between
     .wmre-grid--justify-around
     .wmre-grid--justify-end
     .wmre-grid--justify-center
   </code>
-</pre><hr><h2>Floats</h2><p>Floats an element in the intended direction.</p><pre class="wmre-col-1 wmre-col-md-1-2">
-  <code class="scss">
+</pre><h3>Information for designers</h3><p>The grid is part of the Design System Sketch library or as a <a href="https://github.com/jokinL/Purecss-grid-Sketch" target="_blank" title="Standalone grid Sketch file" class="wmre-link">standalone template file</a>.</p><h4>Screen sizes</h4><p></p><ul><li>Extra Small Devices (≥320px, 2-col + 1-col)</li><li>Small Device 2 (SM) (≥568px 6-col + 3-col + 2-col)</li><li>Small Device (MD) (≥768px)</li><li>Medium Device (LG) (≥992px)</li><li>Large Device (XL) (≥1280px)</li></ul><p></p><h4>Sketch grid sizes</h4><p></p><ul><li><strong>1280px</strong>: 12 columns, 960px total width, 80px each which includes 16px padding and 64px content area column</li><li><strong>992px</strong>: 12 columns, 960px total width, 80px each which includes 16px padding and 64px content area column</li><li><strong>768px</strong>: 12 columns, 576px width, 48px each which includes 16px padding and 32px content area column</li><li><strong>568px</strong>: 6 columns, 426px width, 71px each which includes 16px padding and 55px content area column</li><li><strong>568px</strong>: 3 columns, 426px width, 142px each which includes 16px padding and 126px content area column</li><li><strong>568px</strong>: 2 columns, 568px width, 142px each which includes padding 16px and 126px content area column</li><li><strong>320px</strong>: 2 columns, 320px width, 213px each which includes padding 16px and 197px content area column</li><li><strong>320px</strong>: 1 column, 320px total width, 320px each which includes 16px padding and 304px content area column</li></ul><p></p><hr><h2>Floats</h2><p>Floats an element in the intended direction.</p><pre class="wmre-col-1 wmre-col-md-1-2">
+  <code class="scss" tabindex="0">
     .wmre-float-left
     .wmre-float-right
   </code>
+</pre><hr><h2>Text Align</h2><p>Aligns text in the intended direction.</p><pre class="wmre-col-1 wmre-col-md-1-2">
+  <code class="scss" tabindex="0">
+    .wmre-text-align-left
+    .wmre-text-align-center
+    .wmre-text-align-right
+  </code>
 </pre><hr><h2>Show or hide on devices</h2><p>When you want to hide an element based on if the device width is a desktop or mobile device.</p><pre class="wmre-col-1">
-  <code class="scss">
+  <code class="scss" tabindex="0">
     .wmre-hide-mobile /* Hide only on mobile devices or smaller (less than 48em)  */
     .wmre-hide-desktop /* Hide only on desktop devices or larger (greater than 48em) */
   </code>
@@ -34,6 +40,17 @@
     .wmre-m-xs // applies a margin of 0.25rem to all sides
     .wmre-p-b-lg // applies a padding-bottom of 2rem
     .wmre-m-l-none // sets left margin to 0
+  </code>
+</pre><h3>Grid column spacing</h3><p>Spacing can be applied in between <code class="wmre-website-inline-code">.wmre-col-*</code> elements by adding a class to the parent <code class="wmre-website-inline-code">.wmre-grid</code>.</p><p>The classes are named using the format <code class="wmre-website-inline-code">.wmre-grid--spacing-{col-count}-{size}</code>.</p><p>Where <code class="wmre-website-inline-code">{col-count}</code> is the number of columns per row and <code class="wmre-website-inline-code">{size}</code> is the same as in the spacing utility classes above.</p><p>Spacing can also be applied responsively using the format <code class="wmre-website-inline-code">.wmre-grid--spacing-{breakpoint}-{col-count}-{size}</code>.</p><p>Where <code class="wmre-website-inline-code">{breakpoint}</code> is one of breakpoint sizes described in the grid section.</p><p>Some examples of using these utility classes...</p><pre>
+  <code>
+    .wmre-grid--spacing-2-md // applies a 1rem spacing between 2 columns
+    .wmre-grid--spacing-lg-4-lg // applies a 2rem spacing between 4 columns above a screen width of 1024px
+  </code>
+</pre><hr><h2>Background Colour</h2><p>Changes background to the intended colour.</p><pre class="wmre-col-1 wmre-col-md-1-2">
+  <code class="wmre-show-more-ignore scss" tabindex="0">
+    .bg-default
+    .bg-white
+    .bg-transparent
   </code>
 </pre></div></div></main><footer class="wmre-footer"><div class="wmre-container wmre-grid"><div class="wmre-col-1 wmre-col-md-1-2">Copyright West Midlands Rail Executive &copy; 2020</div><div class="wmre-col-1 wmre-col-md-1-2"><a href="https://www.wmca.org.uk/policies" title="Privacy and cookies policy" target="_blank" rel="noopener noreferrer" class="wmre-footer__link wmre-link">Privacy &amp; Cookies Policy</a></div></div></footer><script src="https://wmcadigital.github.io/wmre-design-system/js/wmre-website.min.js"></script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-151672610-1"></script><script>window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
