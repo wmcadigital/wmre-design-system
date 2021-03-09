@@ -153,6 +153,24 @@ $header-height-mobile: 4rem;
       }
     }
   }
+
+  &--transparent {
+    background-color: transparent;
+
+    .wmre-mega-menu {
+      &::after {
+        background-color: transparent;
+      }
+    }
+
+    .wmre-mega-menu__primary-menu-link {
+      color: get-color(text);
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
 }
 
 // mega menu styling

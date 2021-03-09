@@ -27,12 +27,12 @@
   {{
     wmreCookiesBanner()
   }}
-  <div class="wmre-header{{appClass}}{{menuClass}}">
+  <div class="wmre-header{{appClass}}{{menuClass}} {{"wmre-header--transparent" if params.isTransparent else "" }}">
     <div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between">
       <div class="wmre-header__vertical-align wmre-col-auto">
         <!-- Logo -->
         <a class="wmre-header__logo-link" href="/" title="West Midlands Combined Authority Design System">
-          <img class="wmre-header__logo" alt="West Midlands Combined Authority logo" src="/img/logo.svg" />
+          <img class="wmre-header__logo" alt="West Midlands Combined Authority logo" src="{{"/img/logo-white.svg" if params.isTransparent else "/img/logo.svg" }}" />
         </a>
       </div>
       {#- If with a title #}
