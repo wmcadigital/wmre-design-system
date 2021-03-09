@@ -1,0 +1,51 @@
+$shadow: #d3d3d3;
+$h2: #54565b;
+$link: #3cbfae;
+
+.wmre-homepage-card {
+  display: inline-block;
+  position: relative;
+  width: 235px;
+  height: 425px;
+  margin: 3px;
+  padding: 20px;
+  background-color: $white;
+  box-shadow: 0 0 6px 0 $shadow;
+  vertical-align: top;
+  white-space: normal;
+
+  :first-child {
+    margin: 0 0 0;
+    font-size: 12px;
+    text-align: right;
+  }
+
+  p {
+    margin: 0 0 25px;
+    font-size: 13px;
+    line-height: 1.4em;
+  }
+
+  h2 {
+    margin: 15px 0 25px;
+    color: $h2;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  a {
+    display: inline-block;
+    margin-bottom: 15px;
+    border-bottom: 2px solid $link;
+    color: $black;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+  }
+}

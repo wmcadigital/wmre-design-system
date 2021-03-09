@@ -15,6 +15,7 @@
     "ie 9",
     "iOS 9"
   ],
+  "config": {"build":"local"},
   "buildDirs": {
     "local": {
       "baseUrl": "http://localhost:3000",

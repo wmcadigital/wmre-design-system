@@ -18,16 +18,10 @@
 <!-- Main header section -->
 <header class="wmre-header{{appClass}}">
   <div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between">
-    <div class="wmre-header__vertical-align wmre-col-auto">
-      <!-- Logo -->
-      <a class="wmre-header__logo-link" href="$*baseUrl/" title="West Midlands Rail Executive Design System">
-        <img class="wmre-header__logo" alt="West Midlands Rail Executive logo" src="$*cdn/img/logo.svg" />
-      </a>
-      <!-- Phase indicator -->
-      {{
-        wmrePhaseIndicator() | indent(6) | trim
-      }}
-    </div>
+    <!-- Logo -->
+    <a href="/" title="West Midlands Rail Executive Design System">
+      <img class="logo" alt="West Midlands Rail Executive logo" src="$*cdn/img/logo.svg" />
+    </a>    
 
     {#- If with a title #}
     {% if params.withTitle -%}
@@ -38,16 +32,13 @@
     {%- else %}
     {#- Else with a navigation -#}
     <!-- Nav items -->
-    <nav class="wmre-header__vertical-align wmre-col-auto">
-      <ul class="wmre-header__links wmre-header__main-links">
-        {% for navItem in navItems -%}
-        <li class="wmre-header__link">
-          <a href="$*baseUrl/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self" class="wmre-link" >
-            {{ navItem.name}}
-          </a>
-        </li>
-        {%- endfor %}
-      </ul>
+    <nav>
+      {% for navItem in navItems -%}
+        <a href="/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self">
+          {{ navItem.name}}
+        </a>
+      {%- endfor %}
+      
 
       {%- if params.app %}
       <!-- Back button -->

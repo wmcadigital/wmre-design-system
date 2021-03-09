@@ -1,0 +1,61 @@
+$team-bio-bg: #63696c;
+$team-bio-title: #ff8300;
+
+.wmre-team-bio {
+  display: inline-block;
+  width: 280px;
+  height: 289px;
+  overflow: hidden;
+  background: $white;
+  text-align: center;
+  cursor: pointer;
+
+  .bio-img {
+    height: 208px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .details {
+    height: 100%;
+    transition-property: height, padding-top, transform, color, background-color;
+    transition-duration: 300ms;
+  }
+
+  &:hover .details {
+    height: 301px;
+    padding-top: 30px;
+    transform: translateY(-220px);
+    color: $white;
+    background: $team-bio-bg;
+  }
+
+  .name {
+    margin-top: 10px;
+  }
+
+  .title {
+    margin-top: 10px;
+    color: $team-bio-title;
+    font-size: 13px;
+  }
+
+  .info {
+    width: 220px;
+    height: 119px;
+    margin: 10px auto 0;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: left;
+  }
+
+  .share {
+    display: inline-block;
+    width: 45px;
+    margin: 10px;
+  }
+}

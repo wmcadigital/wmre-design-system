@@ -21,6 +21,9 @@
       "name": "Components",
       "subnavItems": [
         {
+          "name": "Article card"
+        },
+        {
           "name": "Breadcrumb"
         },
         {
@@ -33,6 +36,12 @@
           "name": "Form elements"
         },
         {
+          "name": "Homepage card"
+        },
+        {
+          "name": "Info card"
+        },                
+        {
           "name": "Links"
         },
         {
@@ -40,6 +49,12 @@
         },
         {
           "name": "Phase indicator"
+        },
+        {
+          "name": "Project card"
+        },        
+        {
+          "name": "Team bio"
         }
       ]
     },

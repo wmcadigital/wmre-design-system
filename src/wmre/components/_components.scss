@@ -1,9 +1,14 @@
 // This file is imported from ./assets/sass/wmre-components.scss
 
+@import "article-card/article-card"; // 
 @import "breadcrumb/breadcrumb"; // breadcrumb
 @import "button/button"; // buttons
 @import "content-tiles/content-tiles"; // Content tiles for major works pages
 @import "form-elements/form-elements"; // Form elements
+@import "homepage-card/homepage-card"; // Homepage card
+@import "info-card/info-card"; // Info card
 @import "link/link"; // Link elements
 @import "loader/loader"; // Loader
 @import "phase-indicator/phase-indicator"; // Phase indicator
+@import "project-card/project-card"; // Project card
+@import "team-bio/team-bio"; // Team bio

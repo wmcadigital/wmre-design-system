@@ -26,33 +26,23 @@
       clip: auto;
       box-shadow: none;
     }
-  }
 
-  // Logo styles
-  &__logo-link {
-    display: inline-block;
-    //width: 34px;
-    height: 49px;
-    margin-right: $size-sm;
-    overflow: hidden;
-    vertical-align: middle;
-
-    @media screen and(min-width: $breakpoint-md) {
-      width: auto;
+    a {
+      font-weight: bold;
     }
   }
 
-  &__logo {
+  .logo {
     width: 160px;
     max-width: 160px;
     height: 49px;
     float: left;
   }
 
-  // To vertical align the logo's and nav
-  &__vertical-align,
-  .wmre-phase-indicator {
-    vertical-align: middle;
+  nav > a {
+    margin-left: 20px;
+    color: $white;
+    text-decoration: none;
   }
 
   // Title variant
@@ -69,29 +59,8 @@
   }
 
   // Nav links
-  &__links {
-    display: block;
-    margin: 0;
-    padding: 0;
-    float: right;
 
-    @media screen and(min-width: $breakpoint-md) {
-      text-align: right;
-    }
-  }
 
-  &__link {
-    display: inline-block;
-    margin: 0 $size-xs;
-
-    @media screen and(min-width: $breakpoint-sm) {
-      margin: 0 $size-sm;
-    }
-
-    .wmre-link {
-      color: $white;
-    }
-  }
 
   // App specific header styles
   &--mobile-app {
