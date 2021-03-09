@@ -5,14 +5,14 @@ const plugins = require('gulp-load-plugins')();
 const path = require('path');
 const paths = require('./paths.js');
 
-module.exports = () => {
+const spritingSVGs = () => {
   return src(paths.svgs.src)
     .pipe(
       plugins.rename(file => {
         const newName = file;
         const name = file.dirname.split(path.sep);
         name.push(file.basename);
-        name.unshift('wmre');
+        name.unshift('wmcads');
         newName.basename = name.join('-');
       })
     )
@@ -36,6 +36,8 @@ module.exports = () => {
       })
     )
     .pipe(plugins.svgstore())
-    .pipe(plugins.rename({ basename: 'wmre-sprite', extname: '.min.svg' }))
+    .pipe(plugins.rename({ basename: 'wmcads-icons', extname: '.min.svg' }))
     .pipe(dest(paths.svgs.dest));
 };
+
+module.exports = spritingSVGs;

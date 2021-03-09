@@ -183,8 +183,12 @@
       }) | trim | indent(4)
     -}}
     {%- endif -%}
+  </div>
+  {%- endif %}
+</header>
 
-    {%- if params.breadcrumbs and params.breadcrumbs.section != 'Home' %}
+<div>
+{%- if params.breadcrumbs and params.breadcrumbs.section != 'Home' %}
     <!-- Breadcrumbs -->
     {{
       wmreBreadcrumb({
@@ -194,10 +198,7 @@
       }) | trim | indent(4)
     -}}
     {% endif %}
-  </div>
-  {%- endif %}
-</header>
-
+</div>
 {% if params.megaMenuDemo %}
 <!-- Content space for example purposes only. DO NOT INCLUDE -->
 <div class="demo-content">

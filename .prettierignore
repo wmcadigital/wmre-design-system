@@ -1,2 +1,2 @@
-src/assets/js/vendor/*
+src/www/assets/vendor/js*
 **/*.min.js

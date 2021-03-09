@@ -45,7 +45,7 @@ Build commands are used for when code is to be compiled to an output that is sui
 - Creates two files in `{root}/doc/css/`
   - `wmre-website.min.css`
     - For styleguide specific styling
-  - `wmre-components.min.css`
+  - `wmre.min.css`
     - For any styling related to WMRE components
 - Creates sourcemaps in `{route}/_sourcemaps/`
 

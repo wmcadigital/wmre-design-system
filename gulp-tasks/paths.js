@@ -1,5 +1,5 @@
 module.exports = {
-  output: 'docs/', // Default output location for code build
+  output: 'docs/', // Default output location for code docs
   server: {
     port: 3000,
     baseDir: './docs/',
@@ -7,9 +7,13 @@ module.exports = {
   },
   styles: {
     src: ['src/**/*.scss'], // src of styles to watch
-    minifySrc: ['src/wmre/assets/sass/wmre-components.scss', 'src/www/wmre-website.scss'], // List of scss file(s) which should be processed, linted & minified
+    minifySrc: [
+      'src/wmre/assets/sass/wmre.scss',
+      'src/www/wmre-website.scss',
+      'src/www/pages/templates/templates.scss'
+    ], // List of scss file(s) which should be processed, linted & minified
     output: 'docs/css/', // output location of minified styles
-    reactNativeSrc: 'src/wmre/assets/sass/wmre-components.scss'
+    reactNativeSrc: 'src/wmre/assets/sass/wmre.scss'
   },
   scripts: {
     src: ['src/**/*.js'], // Src of JS files to watch
@@ -23,17 +27,27 @@ module.exports = {
     ],
     output: 'docs/js/' // Output location of minified JS files
   },
+  fonts: {
+    src: 'src/wmre/assets/fonts/**/*',
+    output: 'docs/fonts/'
+  },
   nunjucks: {
-    src: 'src/**/*.njk', // Used for watching njk files
-    websiteSrc: 'src/www/pages/**/*.njk',
-    output: 'docs/'
+    src: 'src/**/*.{njk,md,html}', // Used for watching njk files
+    websiteSrc: 'src/www/pages/**/*.{njk,md,html}',
+    componentSrc: 'src/wmre/**/*.{njk,md,html}',
+    output: 'docs/',
+    componentOutput: 'docs/njk'
+  },
+  njkData: {
+    src: 'src/**/*.njk.json',
+    output: 'docs/json/'
   },
   svgs: {
     src: 'src/wmre/assets/icon/**/*.svg',
     dest: 'docs/img/'
   },
   images: {
-    src: ['src/wmre/assets/img/**/*'],
+    src: ['src/wmre/assets/img/**/*.{png,gif,jpg}'],
     output: 'src/wmre/assets/img/**/*',
     dest: 'docs/img/'
   },
