@@ -1,0 +1,14 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Share" %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+{# Content tile small 1 #}
+{%- from "wmre/components/share/_share.njk" import wmreShare -%}
+{{
+  compExample([
+    wmreShare()
+  ])
+}}
+
+{% endblock %}

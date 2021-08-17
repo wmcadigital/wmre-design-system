@@ -4,10 +4,9 @@
 
 {% block content %}
 {%- from "wmre/components/article-card/_article-card.njk" import wmreArticleCard -%}
-{{
-  compExample([
-    wmreArticleCard()
-  ])
-}}
+{{ compExample([wmreArticleCard()]) }}
 
+{{ compExample([wmreArticleCard('row')]) }}
+
+{{ compExample([wmreArticleCard('related')]) }}
 {% endblock %}

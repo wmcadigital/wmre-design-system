@@ -39,7 +39,7 @@ $team-bio-title: #ff8300;
 
   .title {
     margin-top: 10px;
-    color: $team-bio-title;
+    color: get-color(primary);
     font-size: 13px;
   }
 

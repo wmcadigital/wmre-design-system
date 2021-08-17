@@ -33,8 +33,12 @@ img {
 
 // Controls how elements look when focused (helps with accesibility/keyboard-only users)
 *:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px $white, 0 0 0 4px get-color(secondary);
+  outline: 2px solid get-color(primary);
+  outline-offset: 2px;
+}
+
+button:focus {
+  outline: 0;
 }
 
 // This gets rid of firefox default focus dash-border

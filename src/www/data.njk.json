@@ -51,8 +51,14 @@
           "name": "Phase indicator"
         },
         {
-          "name": "Project card"
-        },        
+          "name": "Related links"
+        },                
+        {
+          "name": "Share"
+        }, 
+        {
+          "name": "Station"
+        },                
         {
           "name": "Team bio"
         }

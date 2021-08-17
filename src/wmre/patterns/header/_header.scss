@@ -32,17 +32,21 @@
     }
   }
 
+  &.home {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  a {
+    outline-width: 0;
+  }
+
   .logo {
-    width: 160px;
     max-width: 160px;
     height: 49px;
     float: left;
-  }
-
-  nav > a {
-    margin-left: 20px;
-    color: $white;
-    text-decoration: none;
+    padding: 4px;
   }
 
   // Title variant
@@ -59,8 +63,119 @@
   }
 
   // Nav links
+  [title="Search"] {
+    background: url("/media/fskfztb3/search.png") no-repeat center / cover;
+    height: 18px;
+    border: 0;
+    cursor: pointer;
+    width: 16px;
+    position: relative;
+    top: 3px;
+    display: inline-block;
+  }
 
+  .menuwrap {
+    position: relative;
+  }
 
+  .menu {
+    display: none;
+    color: $white;
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+  }
+
+  nav {
+    align-self: flex-end;
+
+    > a {
+      margin-left: 20px;
+      color: $white;
+      text-decoration: none;
+    }
+
+    > a:hover,
+    .line {
+      text-decoration: 3px underline get-color(primary) solid;
+      text-underline-offset: 3px;
+    }
+  }
+
+  [has-submenu] {
+    padding-bottom: 24px;
+
+    &:hover + .submenu {
+      display: block;
+    }
+  }
+
+  .mini-nav {
+    display: block !important;
+    position: absolute;
+    background: get-color(bgHeader);
+    right: 0;
+    top: 0;
+    //width: 320px; height: 100vh;*
+    overflow-y: auto;
+    z-index: 2;
+
+    > a {
+      display: block;
+      margin: 20px;
+      top: 0 !important;
+    }
+  }
+
+  .submenu {
+    display: none;
+    position: fixed;
+    background: $white;
+    left: 0;
+    width: calc(100vw - 9px);
+    text-align: center;
+    top: 80px;
+    z-index: 2;
+
+    &:hover {
+      display: block;
+    }
+
+    > div {
+      max-width: 325px;
+      display: inline-block;
+      text-align: left;
+      vertical-align: top;
+      padding: 40px 15px;
+    }
+
+    a {
+      display: block;
+      margin: 15px 0;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .text {
+      color: get-color(text);
+    }
+
+    p {
+      margin: 0;
+    }
+  }
 
   // App specific header styles
   &--mobile-app {
@@ -76,6 +191,22 @@
       @media screen and(min-width: $breakpoint-md) {
         display: none;
       }
+    }
+  }
+}
+
+@media (max-width: 832px) {
+  .wmre-header {
+    nav {
+      display: none;
+    }
+
+    .menu {
+      display: block;
+    }
+
+    [has-submenu] {
+      padding-bottom: 0;
     }
   }
 }
