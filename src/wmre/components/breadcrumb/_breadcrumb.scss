@@ -29,7 +29,7 @@
 
   // Style a tag within breadcrumb
   &__link {
-    color: get-color(background);
+    color: get-color(background) !important;
 
     &--current {
       font-weight: bold;
