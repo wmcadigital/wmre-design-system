@@ -36,6 +36,7 @@
   max-width: $breakpoint-lg;
   margin: auto;
   padding: 0 $size-sm;
+  position: relative;
 
   @media screen and (min-width: $breakpoint-lg) {
     padding: 0 $size-md;

@@ -199,7 +199,7 @@ rules:
 
   # Rule no-misspelled-properties will enforce the correct spelling of CSS properties and prevent the use of unknown CSS properties.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-misspelled-properties.md
-  no-misspelled-properties: 2
+  no-misspelled-properties: 0
 
   # Rule no-qualifying-elements will enforce that selectors are not allowed to have qualifying elements.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-qualifying-elements.md
@@ -227,7 +227,7 @@ rules:
 
   # Rule no-url-protocols will enforce that protocols and domains are not used within urls.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-url-protocols.md
-  no-url-protocols: 2
+  no-url-protocols: 0
 
   # Rule no-vendor-prefixes will enforce that vendor prefixes are not allowed to be used.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-vendor-prefixes.md
@@ -250,7 +250,7 @@ rules:
   # Rule property-sort-order will enforce the order in which declarations are written.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/property-sort-order.md
   property-sort-order:
-    - 2
+    - 0
     - order:
         - 'content'
         - 'quotes'
@@ -408,7 +408,7 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/property-units.md
   property-units:
     - 2
-    - global: ['cm', 'em', 'pt', 'px', 'rem', 'vh', 'ex']
+    - global: ['cm', 'em', 'pt', 'px', 'rem', 'vh', 'ex', 's', 'ms']
 
   # Rule pseudo-element will enforce that:
   # - pseudo-elements must start with double colons

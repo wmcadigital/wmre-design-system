@@ -1,0 +1,12 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Article card" %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+{%- from "wmre/components/article-card/_article-card.njk" import wmreArticleCard -%}
+{{ compExample([wmreArticleCard()]) }}
+
+{{ compExample([wmreArticleCard('row')]) }}
+
+{{ compExample([wmreArticleCard('related')]) }}
+{% endblock %}

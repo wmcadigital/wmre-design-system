@@ -1,10 +1,11 @@
 // PALETTE COLOURS
 // All of our palette colours with their respective tints (mix white in at 10% intervals)
 // All brand colours, see styles/colour-palettes page for more...
+// prev bgheader #222222
 $palettes: (
-  primary: #169586,
+  primary: #007f70,
   secondary: #54565b,
-  bgHeader: #222222,
+  bgHeader: #343332,
   bgBreadcrumb: #54565b,
   bgFooter: #343332,
   typography: #545559,
@@ -31,7 +32,7 @@ $white: #ffffff;
 $black: #000000;
 
 // TEXT
-$text-color: get-color($black);
+$text-color: get-color(typography);
 $x-font-family: "Open Sans", sans-serif;
 $x-heading-font-family: "Open Sans", sans-serif;
 
@@ -53,7 +54,7 @@ $size-xl: 3rem; // 48px
 $breakpoint-xs: 0; // Extra small screen / phone
 $breakpoint-sm: 568px; // Small screen / phone
 $breakpoint-md: 768px; // Medium screen / tablet
-$breakpoint-lg: 992px; // Large screen / desktop (this is used for wmnds-container size)
+$breakpoint-lg: 959px; // Large screen / desktop (this is used for wmnds-container size)
 $breakpoint-xl: 1280px; // Extra large screen / wide desktop
 
 // Grid vars

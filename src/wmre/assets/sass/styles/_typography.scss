@@ -7,6 +7,14 @@ body {
   @include type-setting(0);
 }
 
+main {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
+}
+
 // Get rid of margin for the first header item in main content
 * {
   h1:first-child,
@@ -66,6 +74,23 @@ h3,
 h4,
 .h4 {
   @include type-setting(4);
+}
+
+a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: get-color(primary);
+  cursor: pointer;
+
+  &:visited {
+    color: get-color(primary);
+  }
+
+  &:hover {
+    color: get-color(primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }
 
 p,

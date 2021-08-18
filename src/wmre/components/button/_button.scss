@@ -7,7 +7,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   box-sizing: border-box;
   display: inline-block;
   position: relative;
-  padding: $size-md;
+  padding: 10px 20px;
   transition: $btn-transition;
   border: 3px solid get-color(primary);
   border-radius: $btn-border-radius;

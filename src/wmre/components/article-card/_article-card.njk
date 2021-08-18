@@ -1,0 +1,28 @@
+{% macro wmreArticleCard(type) %}
+  
+  {% if type == "related" %}
+    <a class="wmre-article-related" href="/">
+      <p>Work set to start on Black Country railway stations after funding confirmed</p>
+      <div>Tuesday 23 March 2021</div>
+    </a>
+
+  {% elif type == "row" %}
+    <div class="wmre-article-row">
+      <a class="img" href="/">
+        <img src="/img/news/news-card-train.png" alt="rail-programme">
+      </a>
+      <h3><a href="/">Work set to start on Black Country railway stations after funding confirmed</a></h3>
+      <p>Works to pave the way for £55 million construction of two Black County Railway Stations will begin this Spring following the final approval of Government funding. The budget earlier this month saw the final piece of funding for the construction of Darlaston and Willenhall Stations confirmed as part </p>
+      <a href="/">Read more</a>
+    </div>
+  {% else %}
+    <a class="wmre-article-card">
+        <img src="/img/news/news-card-train.png" alt="rail-programme">
+        <div>
+            <h2>All change at the top for the West Midlands Rail Executive</h2>
+            <time>Thursday 04 April, 2019</time>
+            <div class="read">Read full article</div>
+        </div>
+    </a>
+  {% endif %}
+{% endmacro %}
