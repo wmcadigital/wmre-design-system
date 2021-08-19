@@ -69,8 +69,9 @@ $primary: #3cbfae;
     height: 205px;
     padding: 58px 10px 0;
     transition: height 200ms cubic-bezier(0.18, 0.89, 0.38, 1.17);
-    background: url("$*cdn/img/news/news-triangle.svg") no-repeat center 0% / cover;
-    text-align: left;
+    background-repeat: no-repeat;
+    background-size: 129%;
+    background-position: -10px 0;
   }
 
   &:hover > div {
