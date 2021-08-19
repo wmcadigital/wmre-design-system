@@ -16,7 +16,7 @@
     "iOS 9"
   ],
   "config": {
-    "build": "local"
+    "build": "ghpages"
   },
   "buildDirs": {
     "local": {
