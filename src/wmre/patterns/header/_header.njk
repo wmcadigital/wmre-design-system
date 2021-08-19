@@ -19,7 +19,7 @@
 <header class="wmre-header{{appClass}}">
   <div class="menuwrap wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between">
     <!-- Logo -->
-    <a class="logo" href="/" title="West Midlands Rail Executive Design System">
+    <a class="logo" href="$*cdn/" title="West Midlands Rail Executive Design System">
       <img alt="West Midlands Rail Executive logo" src="$*cdn/img/wmre-nav-logo.png" />
     </a>    
     <a class="menu" onclick="this.nextElementSibling.classList.add('mini-nav');event.stopPropagation()">☰</a>
@@ -34,7 +34,7 @@
     <!-- Nav items -->
     <nav>
       {% for navItem in navItems -%}
-        <a href="/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self">
+        <a href="$*cdn/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self">
           {{ navItem.name}}
         </a>
       {%- endfor %}
