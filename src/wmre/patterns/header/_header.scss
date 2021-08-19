@@ -195,7 +195,7 @@
   }
 }
 
-@media (max-width: 832px) {
+@media (max-width: 869px) {
   .wmre-header {
     nav {
       display: none;
@@ -207,6 +207,10 @@
 
     [has-submenu] {
       padding-bottom: 0;
+
+      &:hover + .submenu {
+        display: none;
+      }
     }
   }
 }
