@@ -1,0 +1,13 @@
+{% filter trim %}
+{% raw %}
+{% from "wmre/components/button/_button.njk" import wmreButton %}
+
+{{
+   wmreButton({
+      classNames: "wmre-btn--mode",
+      text: "Metro",
+      iconLeft: "modes-isolated-metro"
+    })
+}}
+{% endraw %}
+{% endfilter %}

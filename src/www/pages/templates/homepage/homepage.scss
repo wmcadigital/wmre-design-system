@@ -1,0 +1,62 @@
+.homepage {
+  .what-we-do {
+    svg {
+      display: block;
+      width: 50px;
+      height: 50px;
+      fill: get-color(primary);
+    }
+
+    i {
+      color: get-color(primary) !important;
+    }
+
+    a {
+      display: block;
+      width: 90%;
+    }
+
+    div {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  .news {
+    .wmre-col-md-12-24 {
+      padding-right: $size-lg;
+      @media screen and (max-width: $breakpoint-md) {
+        margin-bottom: $size-lg;
+        padding-right: 0;
+      }
+    }
+
+    .wmre-col-sm-1-2:nth-child(2) {
+      padding-right: $size-md;
+      @media screen and (max-width: $breakpoint-md) {
+        padding-right: 0;
+      }
+    }
+
+    .wmre-col-sm-1-2:nth-child(3) {
+      padding-left: $size-md;
+      @media screen and (max-width: $breakpoint-md) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .social {
+    h2 {
+      @media screen and (max-width: $breakpoint-sm) {
+        padding: 0;
+      }
+    }
+
+    h3 {
+      @media screen and (max-width: $breakpoint-sm) {
+        height: initial;
+        padding: 0;
+      }
+    }
+  }
+}
