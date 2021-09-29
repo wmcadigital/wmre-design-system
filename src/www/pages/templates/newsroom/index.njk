@@ -1,0 +1,25 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="News" %} {% set section = "Templates" %} 
+{# Imports #} 
+{% from "wmre/components/link/link/_link.njk" import wmreLink %}
+{% from "wmre/components/icon/_icon.njk" import wmreIcon %}
+{% from "wmre/components/page-contents/_page-contents.njk" import wmrePageContents %}
+{% from "wmre/components/breadcrumb/_breadcrumb.njk" import wmreBreadcrumb %}
+
+{# Set array of tiles #} 
+{% block content %}
+
+<div class="template-newsroom">
+  <div class="wmre-container wmre-m-b-lg">
+    <h1 id="wmre-main-content" class="wmre-hide-mobile">News</h1>
+    <div class="wmre-col-1 wmre-col-md-2-3 wmre-p-r-xl">
+    </div>
+  </div>
+  <div class="wmre-container">
+    <div class="wmre-grid">
+      <div class="main wmre-col-1 wmre-col-md-2-3 wmre-m-b-xl wmre-p-r-lg">
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

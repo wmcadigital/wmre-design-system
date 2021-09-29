@@ -1,0 +1,57 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Programme Template" %} {% set section = "Templates" %} 
+{# Imports #} 
+{%- from "wmre/components/content-tiles/normal/_normal.njk" import wmreContentTilesNormal -%}
+{% from "wmre/components/link/link/_link.njk" import wmreLink %}
+{% from "wmre/components/inset-text/_inset-text.njk" import wmreInsetText %} 
+{% from "wmre/components/icon/_icon.njk" import wmreIcon %}
+{% from "wmre/components/content-card/_content-card.njk" import wmreContentCard %}
+{% from "wmre/components/page-header/_page-header.njk" import wmrePageHeader %}
+{% from "wmre/components/hub-header/_hub-header.njk" import wmreHubHeader %}
+{%- from "wmre/components/button/_button.njk" import wmreButton as start -%}
+{# Set array of tiles #} 
+{% block content %} 
+<div>
+{{
+ wmreHubHeader({
+      title: 'West Midlands rail programme',
+      copy: 'Building the future railways'
+    })
+}}
+<div class="wmre-container">
+  <div class="wmre-grid">
+    <div class="wmre-col-1 wmre-col-md-3-4 wmre-p-t-lg">
+      <p>Lockdown has been quite a journey but cycling and walking is more popular than ever.</p>
+      <p>After marking this year the Big Summer of Cycling &amp; Walking, let’s not stop now. We're continuing to invest in creating a region that supports healthy, greener and safer travelling. We want to help you get started or keep going.</p>
+      <p>Whatever your travel plans - whether it's a cycle around your local streets or a winter walkie - we're here to help you start the adventure before you get there. There’s never been a better time to stay fit and healthy than right now - so, get your roll &amp; stroll on!</p>
+      <h2>Latest West Midlands Rail Programme News</h2>
+      <div class="wmre-grid wmre-grid--justify-between">
+        <div class="wmre-col-1 wmre-col-sm-1-2 wmre-p-r-sm wmre-m-b-sm">
+        {{
+          wmreContentCard({
+            clickable: true,
+            isNews: true,
+            src: true,
+            isThirdCard: false,
+            title: 'Get Going Continue Rolling',
+            copy: 'Whether youre rolling to work or school, or catching some fresh air, theres always safe and new ways to get there.'
+          })
+        }}
+        </div>
+        <div class="wmre-col-1 wmre-col-sm-1-2 wmre-p-l-sm wmre-m-b-sm">
+        {{
+          wmreContentCard({
+            clickable: true,
+            isNews: true,
+            src: true,
+            isThirdCard: false,
+            title: 'All things strolling',
+            copy: 'Wherever youre heading, theres always new and safe ways to get there on foot. '
+          })
+        }}
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+{% endblock %}

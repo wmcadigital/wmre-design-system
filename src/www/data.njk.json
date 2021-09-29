@@ -80,6 +80,35 @@
           "name": "Header and footer"
         }
       ]
+    },
+    {
+      "name": "Templates",
+      "subnavItems": [
+        {
+          "name": "Homepage"
+        },
+        {
+          "name": "Programme"
+        },
+        {
+          "name": "Newsroom"
+        },
+        {
+          "name": "News Article"
+        },
+        {
+          "name": "Project"
+        },
+        {
+          "name": "Projects map"
+        },
+        {
+          "name": "Projects list"
+        },
+        {
+          "name": "Content page example"
+        }
+      ]
     }
   ],
   "colors": {

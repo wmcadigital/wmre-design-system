@@ -1,0 +1,65 @@
+{% macro wmrePageContents(params) %}
+{% from "wmre/components/accordion/_accordion.njk" import wmreAccordion %}
+{% set title = params.title if params.title else "Page title" %}
+
+  <div class="wmre-page-contents {% if(params.dynamic) %} wmre-dynamic-page-contents {% endif %}  {% if(params.rightMargin) %} wmre-m-r-lg {% endif %} {% if(params.sections) %}wmre-page-contents--with-accordion{% endif %}">
+      <h3>Page contents</h3>
+      <div class="{% if(params.sections) %}current{% endif %}">{{title}}</div>
+      {% if(params.example) %}
+        <a>link 1</a>
+        <a>link 2</a>
+        <a>link 3</a>
+        <a>link 4</a>
+      {% endif %}
+      {% if(params.sections) %}
+      <div class="wmre-accordion">
+        <div aria-controls="accordion-01" class="wmre-accordion__summary-wrapper" aria-expanded="false">
+        <!-- accordion summary -->
+        <div class="wmre-accordion__summary">
+          <p class="wmre-m-b-none"><a href="#">Section 1</a></p>
+        </div>
+        <!-- plus icon -->
+        <svg class="wmre-accordion__icon">
+          <use xlink:href="#wmre-general-expand" href="#wmre-general-expand"></use>
+        </svg>
+        <!-- minus icon -->
+        <svg class="wmre-accordion__icon wmre-accordion__icon--minimise">
+          <use xlink:href="#wmre-general-minimise" href="#wmre-general-minimise"></use>
+        </svg>
+      </div>
+
+      <!-- accordion content -->
+      <div class="wmre-accordion__content" id="accordion-01">
+        <ul class="wmre-bare-list">
+          <li class="current"><a href="#">Sub section 1</a></li>
+          <li><a href="#">Sub section 2</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wmre-accordion">
+        <div aria-controls="accordion-01" class="wmre-accordion__summary-wrapper" aria-expanded="false">
+        <!-- accordion summary -->
+        <div class="wmre-accordion__summary">
+          <p class="wmre-m-b-none"><a href="#">Section 2</a></p>
+        </div>
+        <!-- plus icon -->
+        <svg class="wmre-accordion__icon">
+          <use xlink:href="#wmre-general-expand" href="#wmre-general-expand"></use>
+        </svg>
+        <!-- minus icon -->
+        <svg class="wmre-accordion__icon wmre-accordion__icon--minimise">
+          <use xlink:href="#wmre-general-minimise" href="#wmre-general-minimise"></use>
+        </svg>
+      </div>
+
+      <!-- accordion content -->
+      <div class="wmre-accordion__content" id="accordion-01">
+        <ul class="wmre-bare-list">
+          <li><a href="#">Sub section 1</a></li>
+          <li><a href="#">Sub section 2</a></li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+{% endmacro %}

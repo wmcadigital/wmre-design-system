@@ -1,0 +1,10 @@
+.wmre-bare-list {
+  list-style: none;
+  padding-inline-start: $size-xs;
+
+  a,
+  .wmre-link {
+    display: inline;
+  }
+
+}
