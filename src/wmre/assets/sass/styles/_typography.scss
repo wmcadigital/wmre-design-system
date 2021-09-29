@@ -4,6 +4,7 @@ body {
   padding: 0;
   color: get-color(text);
   font-family: $x-font-family;
+  font-weight: normal;
   @include type-setting(0);
 }
 
