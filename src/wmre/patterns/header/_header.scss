@@ -191,6 +191,12 @@ $header-height-mobile: 4rem;
     text-decoration: none;
   }
 
+  &__sub-menu-link {
+    color: get-color(text) !important;
+    font-family: $x-font-family !important;
+    font-weight: normal !important;
+  }
+
   &__search-icon {
     width: 1.25rem;
     height: 1.25rem;
@@ -401,7 +407,6 @@ $header-height-mobile: 4rem;
     }
 
     &__sub-menu-link {
-      color: get-color(text);
       text-decoration: none;
 
       &-icon {
@@ -611,9 +616,8 @@ $header-height-mobile: 4rem;
           position: relative;
           margin-bottom: $size-sm;
           padding-left: $size-lg;
-          color: get-color(primary);
+          color: get-color(text);
           font-size: 1.125rem;
-          font-weight: 700;
           text-decoration: none;
         }
 
