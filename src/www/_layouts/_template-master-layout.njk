@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="wmre-html">
+  <!-- Head -->
+  {% include "www/_partials/_template_head.njk" %}
+  <!-- end: Head -->
+
+  <body class="wmre-body">
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and
+        security.
+      </p>
+    <![endif]-->
+
+    {# header #}
+    {% from "wmre/patterns/header/_header.njk" import wmreHeader %}
+    {{
+      wmreHeader ({
+        id: "mega-menu",
+        navItems: templateNavItems,
+        banner: true,
+        linkTopLevel: true,
+        search: true,
+        template: true,
+        breadcrumbs: {
+          section: section,
+          pageTitle: pageTitle
+        }
+      })
+    }}
+    {# header #}
+
+    {# main #}
+    <main class="wmre-container--main {% if(params.tempCampaign) %} wmre-m-r-lg {% endif %}">
+      {% block body %}{% endblock %}
+      {{params}}
+    </main>
+    {# main #}
+
+    <!-- footer -->
+    {% from "wmre/patterns/footer/_footer.njk" import wmreFooter %}
+    {{
+      wmreFooter({
+      social: true,
+      menu1: {
+        name: "Governance",
+        menuItems: [{
+          name: "Committee meetings"
+        },{
+          name: "Freedom of information"
+        },{
+          name: "Procurement"
+        }]
+      },
+      menu2: {
+        name: "Resources and support ",
+        menuItems: [{
+          name: "Contact us"
+        }, {
+          name: "Media assets"
+        }, {
+          name: "Careers"
+        }, {
+          name: "Documents"
+        }]
+      },
+      bottomMenu: [{
+        name: "Accessibility"
+      },
+      {
+        name: "Terms and Conditions"
+      },
+      {
+        name: "Policies"
+      }]
+    })
+    }}
+    <!-- footer -->
+
+    <!-- Scripts -->
+    {% include "www/_partials/_scripts.njk" %}
+    <!-- end: Scripts -->
+  </body>
+
+</html>
