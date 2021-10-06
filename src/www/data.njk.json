@@ -30,6 +30,9 @@
           "name": "Buttons"
         },
         {
+          "name": "Content card"
+        },
+        {
           "name": "Content Tiles"
         },
         {
@@ -37,6 +40,9 @@
         },
         {
           "name": "Homepage card"
+        },
+        {
+          "name": "Hub header"
         },
         {
           "name": "Info card"
@@ -49,6 +55,9 @@
         },
         {
           "name": "Phase indicator"
+        },
+        {
+          "name": "Page header"
         },
         {
           "name": "Related links"
@@ -69,6 +78,35 @@
       "subnavItems": [
         {
           "name": "Header and footer"
+        }
+      ]
+    },
+    {
+      "name": "Templates",
+      "subnavItems": [
+        {
+          "name": "Homepage"
+        },
+        {
+          "name": "Programme"
+        },
+        {
+          "name": "Newsroom"
+        },
+        {
+          "name": "News Article"
+        },
+        {
+          "name": "Project"
+        },
+        {
+          "name": "Projects map"
+        },
+        {
+          "name": "Projects list"
+        },
+        {
+          "name": "Content page example"
         }
       ]
     }

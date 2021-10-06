@@ -17,25 +17,20 @@
     {% from "wmre/patterns/header/_header.njk" import wmreHeader %}
     {{
       wmreHeader ({
-        navItems: navItems
+        id: "mega-menu",
+        navItems: navItems,
+        banner: true,
+        linkTopLevel: true,
+        breadcrumbs: {
+          section: section,
+          pageTitle: pageTitle
+        }
       })
     }}
+
     {# header #}
 
-    {# Breadcrumb #}
-    {# Don't display breadcrumb on homepage #}
-    {% if section != 'Home' %}
-        {% from "wmre/components/breadcrumb/_breadcrumb.njk" import wmreBreadcrumb %}
-        {{
-            wmreBreadcrumb({
-              section: section,
-              pageTitle: pageTitle
-            })
-        }}
-    {% endif %}
-    {# Breadcrumb #}
-
-    <main class="wmre-container wmre-container--main">
+    <main class="wmre-container--main">
       {% block body %}{% endblock %}
     </main>
 

@@ -4,6 +4,7 @@ body {
   padding: 0;
   color: get-color(text);
   font-family: $x-font-family;
+  font-weight: normal;
   @include type-setting(0);
 }
 
@@ -48,7 +49,7 @@ a {
 
 h1,
 .h1 {
-  color: get-color(typography);
+  color: get-color(primary);
   @include type-setting(1, 0.85);
   // On desktop devices
   @media all and (min-width: $breakpoint-md) {
@@ -58,7 +59,7 @@ h1,
 
 h2,
 .h2 {
-  color: get-color(typography);
+  color: get-color(primary);
   @include type-setting(2, 0.85);
   // On desktop devices
   @media all and (min-width: $breakpoint-md) {
@@ -68,22 +69,24 @@ h2,
 
 h3,
 .h3 {
+  color: get-color(text);
   @include type-setting(3);
 }
 
 h4,
 .h4 {
+  color: get-color(text);
   @include type-setting(4);
 }
 
 a {
   font-weight: bold;
   text-decoration: underline;
-  color: get-color(primary);
+  color: get-color(text);
   cursor: pointer;
 
   &:visited {
-    color: get-color(primary);
+    color: get-color(secondary);
   }
 
   &:hover {

@@ -1,7 +1,7 @@
 .wmre-phase-indicator {
   padding: $size-xs;
   border-radius: 4px;
-  color: $white;
+  color: $white !important;
   background-color: get-color(secondary);
   font-weight: bold;
   text-decoration: none;

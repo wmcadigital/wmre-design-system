@@ -1,8 +1,12 @@
 // Vars
-@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"; // Google Fonts
+@import "https://fonts.googleapis.com/css?family=Noto+Sans+Display:400,700&display=swap"; // Google Fonts
+@import "https://fonts.googleapis.com/css?family=DM+Sans:400,700"; // Google Fonts
 @import "vars";
 // Mixins
 @import "mixins";
+
+// Grid
+@import "wmre-grid/wmre-grid";
 
 // General non-component Styles
 @import "styles/styles"; // Import general styles
