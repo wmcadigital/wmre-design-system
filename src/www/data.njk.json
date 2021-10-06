@@ -111,6 +111,31 @@
       ]
     }
   ],
+  "templateNavItems": [
+		{
+      "name": "About us",
+      "subnavItems": [
+        {
+          "name": "Homepage"
+        },
+        {
+          "name": "Programme"
+        }
+      ]
+		},
+		{
+			"name": "Partnerships"
+		},
+		{
+			"name": "Community rail"
+		},
+		{
+			"name": "News"
+		},
+		{
+			"name": "Contact us"
+		}
+	],
   "colors": {
     "brand": [
       { "varName": "primary", "name": "Primary Teal" },

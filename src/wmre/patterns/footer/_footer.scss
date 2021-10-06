@@ -29,6 +29,10 @@
   &--v2 {
     padding: $size-lg $size-xs;
 
+    h3 {
+      color: $white;
+    }
+
     .wmre-btn {
       display: block;
       color: get-color(primary);
