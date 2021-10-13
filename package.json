@@ -16,7 +16,7 @@
     "iOS 9"
   ],
   "config": {
-    "build": "ghpages"
+    "build": "live"
   },
   "buildDirs": {
     "local": {
@@ -30,6 +30,10 @@
     "staging": {
       "baseUrl": "https://wmcadigital.github.io/wmre-design-system",
       "cdn": "https://wmcadigital.github.io/wmre-design-system"
+    },
+    "live": {
+      "baseUrl": "https://wmcadigital.github.io/wmre-design-system",
+      "cdn": "https://cloudcdn.wmca.org.uk/wmreassets/ds/1.0.0/"
     }
   },
   "scripts": {
