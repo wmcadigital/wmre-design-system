@@ -560,6 +560,11 @@ $header-height-mobile: 4rem;
     }
 
     &__primary-menu-item {
+
+      button {
+        font-weight: 700;
+      }
+
       &.active {
         .wmre-mega-menu__primary-menu-link {
           background-color: get-color(secondary);
