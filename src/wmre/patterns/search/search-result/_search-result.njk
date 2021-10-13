@@ -1,0 +1,22 @@
+{% macro wmreSearchResult(params) %}
+
+{# Imports #}
+{% from "../../../components/breadcrumb/_breadcrumb.njk" import wmreBreadcrumb %}
+
+<div class="wmre-search-result">
+    <h2 class="wmre-m-b-none"><a href="#" class="h2 wmre-search-result__title">{{params.pageTitle}}</a></h2>
+    {% if params.breadcrumbs === true -%}
+    {{
+        wmreBreadcrumb({
+            section: 'Swift and Tickets',
+            pageTitle: "Swift",
+            exampleAria: "Main",
+            classModifiers: "wmre-hide-mobile"
+        }) | trim
+    }}
+    {%- endif %}
+    <p class="wmre-search-result__date">{{params.date | safe}}</p>
+    <p class="wmre-search-result__excerpt">{{params.excerpt | safe}}</p>
+</div>
+
+{% endmacro %}

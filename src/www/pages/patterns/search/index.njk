@@ -20,7 +20,36 @@
     </ul>
 
     <br><br>
-    
+    {# Search bar #}
+    <h2>Search bar</h2>
+    {% from "wmre/patterns/search/search-bar/_search-bar.njk" import wmreSearchbar %}
+    {{
+        compExample([
+            wmreSearchbar()
+        ])
+    }}
+    {# End Search bar #}
+
+
+    <br><br>
+    {# Sort #}
+    <h2>Sort</h2>
+    <h3>What does it do?</h3>
+    <ul>
+        <li>
+            This gives the user the option to sort search results by relevance or when a page was last updated
+        </li>
+    </ul>
+     {% from "wmre/patterns/search/sort/_sort.njk" import wmreSearchSort %}
+    {{
+        compExample([
+            wmreSearchSort()
+        ])
+    }}
+    {# End sort #}
+
+    <br><br>
+    {# Search filter #}
     <h2>Filter</h2>
     <h3>What does it do?</h3>
     <ul>
@@ -31,7 +60,32 @@
         <li>The filters will narrow down the search results by displaying pages which only match the filter criteria</li>
         <li>On mobile, the filter options will appear when a user clicks on the ‘Filter your results button’. This will trigger an overlay where users can select and apply filters. This is to reduce page size on smaller devices</li>
     </ul>
-    
+    {% from "wmre/patterns/search/search-filter/_search-filter.njk" import wmreSearchFilter %}
+    {{
+        compExample([
+            wmreSearchFilter(
+                {
+                    accordion: [{
+                        summaryTitle: "Topic",
+                        options: [
+                            "Tickets", "Travel advice", "Planning a journey"
+                        ]
+                    },
+                    {
+                        summaryTitle: "Page type",
+                        options: [
+                            "Services", "News", "Bus routes", "Timetables", "Offers and promotions"
+                        ]
+                    }
+                ]}
+            )
+        ], {
+            componentPath: "wmre/patterns/search/search-filter/",
+            njk: false,
+            js: true,
+            iframe: false
+        })
+    }}
 
     {# End search filter #}
     <br><br>
@@ -48,7 +102,18 @@
         <li>If the user’s search query is in the page description, it will be highlighted in bold. This is to help them understand the context of the page</li>
         <li>The horizontal rule at the bottom of a search result is to make the results list easier to scan.</li>
     </ul>
-    
+    {% from "wmre/patterns/search/search-result/_search-result.njk" import wmreSearchResult %}
+    {{
+        compExample([
+            wmreSearchResult(
+                {
+                    pageTitle: "Swift: The smarter way to travel",
+                    breadcrumbs: ['Home', 'Swift'],
+                    excerpt: "<strong>Swift</strong> is the easy and flexible way to travel around the West Midlands. find the <strong>swift</strong> card for you. How do you travel? bus…"
+                }
+            )
+        ])
+    }}
     {# End search result #}
     <br><br>
     {# Pagination #}
@@ -57,7 +122,24 @@
     <ul>
         <li>Allows the user to navigate through search results.</li>
     </ul>
-    
+    {% from "wmre/patterns/search/pagination/_pagination.njk" import wmrePagination %}
+    {{
+        compExample([
+            wmrePagination({
+                pageCount: 8,
+                activePage: 1
+            }),
+            wmrePagination({
+                pageCount: 8,
+                activePage: 5
+            }),
+            wmrePagination({
+                pageCount: 8,
+                activePage: 8
+            })
+        ])
+    }}
+    {# End pagination #}
     <br><br>
 
 {% endblock %}

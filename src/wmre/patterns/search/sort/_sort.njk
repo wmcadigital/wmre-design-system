@@ -1,0 +1,17 @@
+{% macro wmreSearchSort(params) %}
+
+<div class="wmre-search-sort wmre-fe-group">
+    <label class="wmre-fe-label" for="dropdown">
+        <h3>Sort by</h3>
+    </label>
+    <div class="wmre-fe-dropdown">
+        <select class="wmre-fe-dropdown__select" id="dropdown" name="dropdown">
+            <option value="" selected="selected">Choose from list</option>
+            <option value="1">Relevance</option>
+            <option value="2">Most recent</option>
+            <option value="3">Oldest</option>
+        </select>
+    </div>
+</div>
+
+{% endmacro %}

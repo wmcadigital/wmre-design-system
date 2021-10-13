@@ -78,6 +78,9 @@
       "subnavItems": [
         {
           "name": "Header and footer"
+        },
+        {
+          "name": "Search"
         }
       ]
     },

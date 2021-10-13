@@ -1,0 +1,40 @@
+{% macro wmrePagination(params) %}
+
+{# Imports #}
+{% from "../../../components/breadcrumb/_breadcrumb.njk" import wmreBreadcrumb %}
+
+<div class="wmre-pagination wmre-m-t-xl">
+    <ol class="wmre-pagination__nav">
+    {% for i in range(1, params.pageCount + 1) -%}
+    {% if(i == params.activePage - 1) %}
+        <li class="wmre-pagination__item wmre-pagination__item--previous">
+            <a class="wmre-link" href="#">{{ i }}</a>
+        </li>
+    {% elseif(i == params.activePage) %}
+        <li class="wmre-pagination__item wmre-pagination__item--active">
+            {{ i }}
+        </li>
+    {% else %}
+        <li class="wmre-pagination__item">
+            <a class="wmre-link" href="#">{{ i }}</a>
+        </li>
+    {% endif %}
+    {% endfor -%}
+    </ol>
+    {% if(params.activePage > 1) %}
+    <a href="#" target="_self" class="wmre-pagination__prev wmre-link wmre-link--with-chevron" >
+        <svg class="wmre-link__chevron wmre-link__chevron--left">
+            <use xlink:href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use>
+        </svg> Previous page
+    </a>
+    {% endif %}
+    {% if(params.activePage < params.pageCount) %}
+    <a href="#" target="_self" class="wmre-pagination__next wmre-link wmre-link--with-chevron" >
+        Next page <svg class="wmre-link__chevron wmre-link__chevron--right">
+        <use xlink:href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use>
+        </svg>
+    </a>
+    {% endif %}
+</div>
+
+{% endmacro %}

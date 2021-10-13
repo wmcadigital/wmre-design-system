@@ -24,12 +24,15 @@
 }}
 <!-- Main header section -->
 <header>
+  {{
+    wmreCookiesBanner()
+  }}
   <div class="wmre-header{{appClass}}{{menuClass}}">
     <div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between">
       <div class="wmre-header__vertical-align wmre-col-auto">
         <!-- Logo -->
         <a class="wmre-header__logo-link" href="/" title="West Midlands Combined Authority Design System">
-          <img class="wmre-header__logo" alt="West Midlands Rail Executive logo" src="/img/logo.svg" />
+          <img class="wmre-header__logo" alt="West Midlands Combined Authority logo" src="/img/logo.svg" />
         </a>
       </div>
       {#- If with a title #}
@@ -169,7 +172,18 @@
 
 
   {%- if params.banner or params.breadcrumbs %}
-  <div>
+  <div class="wmre-container">
+    {% if params.banner -%}
+    <!-- Phase banner -->
+    {{
+      wmreBanner ({
+        link: 'https://github.com/wmcadigital/wmca-design-system/issues',
+        linkTitle: 'WMCA Design System Github',
+        phase: true
+      }) | trim | indent(4)
+    -}}
+    {%- endif -%}
+
     {%- if params.breadcrumbs and params.breadcrumbs.section != 'Home' %}
     <!-- Breadcrumbs -->
     {{
