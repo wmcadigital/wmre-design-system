@@ -1,0 +1,64 @@
+{% macro wmreFileDownload(params) %}
+{# Imports #}
+{% from "wmre/components/icon/_icon.njk" import wmreIcon %}
+
+{# Set #}
+{% set fileName = params.fileName or 'file name' %}
+{% set dlName = params.dlName or 'Download fileName (fileType), (fileSize)' %}
+{% set htmlName = params.htmlName or 'HTML document link ' %}
+{% set fileType = params.fileType or 'filetype' %}
+{% set fileSize = params.fileSize or 'filesize' %}
+
+<div class="wmre-file-download {% if params.htmlInfo === true -%}wmre-file-download--document{%- endif %}">
+    {% if params.default === true -%}
+    {{
+        wmreIcon({
+            class: "wmre-file-download__icon",
+            icon: "general-file"
+        }) | trim | indent(4)
+    }}
+    {%- endif %}
+    {% if params.htmlDoc === true -%}
+    {{
+        wmreIcon({
+            class: "wmre-file-download__icon",
+            icon: "general-html"
+        }) | trim | indent(4)
+    }}
+    {%- endif %}
+    {% if params.pdfDoc === true -%}
+    {{
+        wmreIcon({
+            class: "wmre-file-download__icon",
+            icon: "general-pdf"
+        }) | trim | indent(4)
+    }}
+    {%- endif %}
+    <div class="wmre-file-download__desc">
+        <a href="#" download="{{ fileName|replace(' ', '_') + '.' + fileType|lower }}" class="wmre-link">
+            {% if params.html === false -%} {{dlName}} {%- endif %}  {% if params.html === true -%} {{htmlName}} {%- endif %}
+        </a>
+        {% if params.accessible === true -%}
+        <p class="wmre-file-download__warning">
+            This file may not be suitable for users of assistive technology. <br>
+            <a href="#" class="wmre-link">Request an accessible format.</a>
+        </p>
+        {%- endif %}
+        {% if params.htmlInfo === true -%}
+        <p class="wmre-file-download__warning">
+            Published 10 July 2021 {% if params.pdfDoc === false -%}<br>
+            Updated 12 July 2021 - <a href="#" class="wmre-link">see all updates</a>{%- endif %}
+        </p>
+        {%- endif %}
+    </div>
+    {% if params.html === true -%}
+    {{
+        wmreIcon({
+            class: "wmre-file-download__chevron-icon",
+            icon: "general-chevron-right"
+        }) | trim | indent(4)
+    }}
+    {%- endif %}
+</div>
+
+{% endmacro %}
