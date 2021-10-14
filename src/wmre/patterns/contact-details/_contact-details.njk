@@ -1,0 +1,21 @@
+{% macro wmreContactDetails(params) %}
+{# Imports #}
+{%- from "wmre/components/warning-text/_warning-text.njk" import wmreWarningText -%}
+{# Set vars #}
+{% set title = params.title if params.title else "Transport for West Midlands" %} {# set title #}
+{% set warningText = params.warningText if params.warningText %} {# set warning text #}
+{% set warningIcon = params.warningIcon if params.warningIcon %} {# set warning text #}
+{% set content = params.content if params.content %} {# set content #}
+
+<div class="wmre-contact-details">
+    <p>{{title}}</p>
+    {{
+        wmreWarningText({
+            text: warningText,
+            icon: warningIcon, 
+            class: "wmre-p-b-sm"
+        }) | indent(6) | trim | safe
+    }}
+    {{content | safe}}
+</div>
+{% endmacro %}

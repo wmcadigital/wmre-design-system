@@ -73,6 +73,9 @@
         },                
         {
           "name": "Team bio"
+        },
+        {
+          "name": "Warning text"
         }
       ]
     },
@@ -81,6 +84,9 @@
       "subnavItems": [
         {
           "name": "Header and footer"
+        },
+        {
+          "name": "Contact details"
         }
       ]
     },
