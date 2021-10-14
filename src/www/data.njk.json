@@ -46,7 +46,10 @@
         },
         {
           "name": "Info card"
-        },                
+        },
+        {
+          "name": "Inset text"
+        },       
         {
           "name": "Links"
         },
