@@ -22,5 +22,13 @@ const icons = () => {
 
 window.addEventListener(
   'DOMContentLoaded',
-  (forEachPolyfill(), icons(), colorPalettes(), cookies(), headerJs(), searchFilterJs(), footerJs(), accordionsJS(), highlightJS)
+  (forEachPolyfill(),
+  icons(),
+  colorPalettes(),
+  cookies(),
+  headerJs(),
+  searchFilterJs(),
+  footerJs(),
+  accordionsJS(),
+  highlightJS)
 );
