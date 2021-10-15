@@ -49,7 +49,10 @@
         },
         {
           "name": "Info card"
-        },                
+        },
+        {
+          "name": "Inset text"
+        },       
         {
           "name": "Links"
         },
@@ -73,6 +76,9 @@
         },                
         {
           "name": "Team bio"
+        },
+        {
+          "name": "Warning text"
         }
       ]
     },
@@ -83,7 +89,7 @@
           "name": "Header and footer"
         },
         {
-          "name": "Search"
+          "name": "Contact details"
         }
       ]
     },
