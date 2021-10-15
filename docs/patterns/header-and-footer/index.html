@@ -12,35 +12,65 @@
 &lt;/a&gt;
 &lt;!-- Main header section --&gt;
 &lt;header&gt;
+  
+
+
+
+
+
+&lt;div class=&quot;bg-white wmre-p-t-md wmre-p-b-md wmre-cookies-banner&quot;&gt;
+  &lt;div class=&quot;wmre-container&quot;&gt;
+    &lt;div class=&quot;wmre-col-1 wmre-col-md-3-4 wmre-col-lg-2-3&quot;&gt;
+      &lt;h3&gt;Your privacy settings&lt;/h3&gt;
+      &lt;p&gt;
+        If you’re happy with the use of cookies by West Midlands Combined Authority
+        and our selected partners, click ‘Accept all cookies’. Or click ‘Manage cookies’ to learn more.
+      &lt;/p&gt;
+      &lt;div class=&quot;wmre-grid wmre-grid--spacing-2-md wmre-cookies-banner__group-buttons&quot;&gt;
+        &lt;button class=&quot;wmre-btn wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24  wmre-cookies-banner__accept-all-cookies&quot; &gt;Accept all cookies
+        &lt;/button&gt;
+
+        &lt;a href=&quot;/patterns/cookies/#cookies_manager&quot; title=&quot;link title&quot; target=&quot;_self&quot; class=&quot;wmre-btn wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24&quot;&gt;
+          Manage Cookies
+        &lt;/a&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
   &lt;div class=&quot;wmre-header wmre-header--mega-menu&quot;&gt;
     &lt;div class=&quot;wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between&quot;&gt;
       &lt;div class=&quot;wmre-header__vertical-align wmre-col-auto&quot;&gt;
         &lt;!-- Logo --&gt;
         &lt;a class=&quot;wmre-header__logo-link&quot; href=&quot;/&quot; title=&quot;West Midlands Combined Authority Design System&quot;&gt;
-          &lt;img class=&quot;wmre-header__logo&quot; alt=&quot;West Midlands Rail Executive logo&quot; src=&quot;/img/logo.svg&quot; /&gt;
+          &lt;img class=&quot;wmre-header__logo&quot; alt=&quot;West Midlands Combined Authority logo&quot; src=&quot;/img/logo.svg&quot; /&gt;
         &lt;/a&gt;
       &lt;/div&gt;
       &lt;!-- Mega menu nav items--&gt;
-      &lt;nav id=&quot;&quot; class=&quot;wmre-mega-menu&quot;&gt;
+      &lt;nav id=&quot;mega-menu&quot; class=&quot;wmre-mega-menu&quot;&gt;
         &lt;!-- Mobile toggle button --&gt;
-        &lt;button class=&quot;wmre-mega-menu__mobile-toggle wmre-btn wmre-btn--secondary wmre-hide-desktop&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;-primary-menu&quot;&gt;Menu
+        &lt;button class=&quot;wmre-mega-menu__mobile-toggle wmre-btn wmre-btn--secondary wmre-hide-desktop&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mega-menu-primary-menu&quot;&gt;Menu
           &lt;svg class=&quot;wmre-mega-menu__close-icon&quot;&gt;&lt;use xlink:href=&quot;#wmre-general-cross&quot; href=&quot;#wmre-general-cross&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
         &lt;/button&gt;
         &lt;!-- Container for mega menu - allows scrolling on mobile nav --&gt;
-        &lt;div id=&quot;-primary-menu&quot; class=&quot;wmre-mega-menu__scroll-controller&quot;&gt;
+        &lt;div id=&quot;mega-menu-primary-menu&quot; class=&quot;wmre-mega-menu__scroll-controller&quot;&gt;
           &lt;!-- Start primary (level 1) navigation --&gt;
           &lt;ul class=&quot;wmre-mega-menu__primary-menu&quot;&gt;
           &lt;li class=&quot;wmre-mega-menu__primary-menu-item&quot;&gt;
             &lt;!-- Show swift logo in nav if is swift &amp; tickets link --&gt;
             
             &lt;!-- allow primary (level 1) item to link if specified --&gt;
-              &lt;button target=&quot;_self&quot; class=&quot;wmre-mega-menu__primary-menu-link&quot; &gt;
+              
+              &lt;a href=&quot; /styles/&quot; title=&quot;Styles page&quot; target=&quot;_self&quot; class=&quot;wmre-mega-menu__primary-menu-link&quot; &gt;
                 Styles
-              &lt;/button&gt;
+              &lt;/a&gt;
+              &lt;!-- if not linked use a button --&gt;
               &lt;!-- arrow icon for mobile nav --&gt;
-              &lt;button class=&quot;wmre-mega-menu__link-arrow-icon-btn&quot; data-label=&quot;Styles&quot; aria-label=&quot;toggle Styles&quot; aria-controls=&quot;-container&quot;&gt;&lt;svg class=&quot;wmre-mega-menu__link-arrow-icon&quot;&gt;&lt;use xlink-href=&quot;#wmre-general-chevron-right&quot; href=&quot;#wmre-general-chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+              &lt;button class=&quot;wmre-mega-menu__link-arrow-icon-btn&quot; data-label=&quot;Styles&quot; aria-label=&quot;toggle Styles&quot; aria-controls=&quot;mega-menu-container&quot;&gt;&lt;svg class=&quot;wmre-mega-menu__link-arrow-icon&quot;&gt;&lt;use xlink-href=&quot;#wmre-general-chevron-right&quot; href=&quot;#wmre-general-chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
               &lt;!-- Start mega menu container --&gt;
-              &lt;div id=&quot;-container-1&quot; class=&quot;wmre-mega-menu__container&quot;&gt;
+              &lt;div id=&quot;mega-menu-container-1&quot; class=&quot;wmre-mega-menu__container&quot;&gt;
                 &lt;div class=&quot;wmre-container&quot;&gt;
                   &lt;!-- Start submenu (level 2) --&gt;
                   &lt;ul class=&quot;wmre-mega-menu__sub-menu&quot;&gt;
@@ -66,13 +96,15 @@
             &lt;!-- Show swift logo in nav if is swift &amp; tickets link --&gt;
             
             &lt;!-- allow primary (level 1) item to link if specified --&gt;
-              &lt;button target=&quot;_self&quot; class=&quot;wmre-mega-menu__primary-menu-link&quot; &gt;
+              
+              &lt;a href=&quot; /components/&quot; title=&quot;Components page&quot; target=&quot;_self&quot; class=&quot;wmre-mega-menu__primary-menu-link&quot; &gt;
                 Components
-              &lt;/button&gt;
+              &lt;/a&gt;
+              &lt;!-- if not linked use a button --&gt;
               &lt;!-- arrow icon for mobile nav --&gt;
-              &lt;button class=&quot;wmre-mega-menu__link-arrow-icon-btn&quot; data-label=&quot;Components&quot; aria-label=&quot;toggle Components&quot; aria-controls=&quot;-container&quot;&gt;&lt;svg class=&quot;wmre-mega-menu__link-arrow-icon&quot;&gt;&lt;use xlink-href=&quot;#wmre-general-chevron-right&quot; href=&quot;#wmre-general-chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+              &lt;button class=&quot;wmre-mega-menu__link-arrow-icon-btn&quot; data-label=&quot;Components&quot; aria-label=&quot;toggle Components&quot; aria-controls=&quot;mega-menu-container&quot;&gt;&lt;svg class=&quot;wmre-mega-menu__link-arrow-icon&quot;&gt;&lt;use xlink-href=&quot;#wmre-general-chevron-right&quot; href=&quot;#wmre-general-chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
               &lt;!-- Start mega menu container --&gt;
-              &lt;div id=&quot;-container-2&quot; class=&quot;wmre-mega-menu__container&quot;&gt;
+              &lt;div id=&quot;mega-menu-container-2&quot; class=&quot;wmre-mega-menu__container&quot;&gt;
                 &lt;div class=&quot;wmre-container&quot;&gt;
                   &lt;!-- Start submenu (level 2) --&gt;
                   &lt;ul class=&quot;wmre-mega-menu__sub-menu&quot;&gt;
@@ -143,13 +175,15 @@
             &lt;!-- Show swift logo in nav if is swift &amp; tickets link --&gt;
             
             &lt;!-- allow primary (level 1) item to link if specified --&gt;
-              &lt;button target=&quot;_self&quot; class=&quot;wmre-mega-menu__primary-menu-link&quot; &gt;
+              
+              &lt;a href=&quot; /patterns/&quot; title=&quot;Patterns page&quot; target=&quot;_self&quot; class=&quot;wmre-mega-menu__primary-menu-link&quot; &gt;
                 Patterns
-              &lt;/button&gt;
+              &lt;/a&gt;
+              &lt;!-- if not linked use a button --&gt;
               &lt;!-- arrow icon for mobile nav --&gt;
-              &lt;button class=&quot;wmre-mega-menu__link-arrow-icon-btn&quot; data-label=&quot;Patterns&quot; aria-label=&quot;toggle Patterns&quot; aria-controls=&quot;-container&quot;&gt;&lt;svg class=&quot;wmre-mega-menu__link-arrow-icon&quot;&gt;&lt;use xlink-href=&quot;#wmre-general-chevron-right&quot; href=&quot;#wmre-general-chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+              &lt;button class=&quot;wmre-mega-menu__link-arrow-icon-btn&quot; data-label=&quot;Patterns&quot; aria-label=&quot;toggle Patterns&quot; aria-controls=&quot;mega-menu-container&quot;&gt;&lt;svg class=&quot;wmre-mega-menu__link-arrow-icon&quot;&gt;&lt;use xlink-href=&quot;#wmre-general-chevron-right&quot; href=&quot;#wmre-general-chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
               &lt;!-- Start mega menu container --&gt;
-              &lt;div id=&quot;-container-3&quot; class=&quot;wmre-mega-menu__container&quot;&gt;
+              &lt;div id=&quot;mega-menu-container-3&quot; class=&quot;wmre-mega-menu__container&quot;&gt;
                 &lt;div class=&quot;wmre-container&quot;&gt;
                   &lt;!-- Start submenu (level 2) --&gt;
                   &lt;ul class=&quot;wmre-mega-menu__sub-menu&quot;&gt;
@@ -169,13 +203,15 @@
             &lt;!-- Show swift logo in nav if is swift &amp; tickets link --&gt;
             
             &lt;!-- allow primary (level 1) item to link if specified --&gt;
-              &lt;button target=&quot;_self&quot; class=&quot;wmre-mega-menu__primary-menu-link&quot; &gt;
+              
+              &lt;a href=&quot; /templates/&quot; title=&quot;Templates page&quot; target=&quot;_self&quot; class=&quot;wmre-mega-menu__primary-menu-link&quot; &gt;
                 Templates
-              &lt;/button&gt;
+              &lt;/a&gt;
+              &lt;!-- if not linked use a button --&gt;
               &lt;!-- arrow icon for mobile nav --&gt;
-              &lt;button class=&quot;wmre-mega-menu__link-arrow-icon-btn&quot; data-label=&quot;Templates&quot; aria-label=&quot;toggle Templates&quot; aria-controls=&quot;-container&quot;&gt;&lt;svg class=&quot;wmre-mega-menu__link-arrow-icon&quot;&gt;&lt;use xlink-href=&quot;#wmre-general-chevron-right&quot; href=&quot;#wmre-general-chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+              &lt;button class=&quot;wmre-mega-menu__link-arrow-icon-btn&quot; data-label=&quot;Templates&quot; aria-label=&quot;toggle Templates&quot; aria-controls=&quot;mega-menu-container&quot;&gt;&lt;svg class=&quot;wmre-mega-menu__link-arrow-icon&quot;&gt;&lt;use xlink-href=&quot;#wmre-general-chevron-right&quot; href=&quot;#wmre-general-chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
               &lt;!-- Start mega menu container --&gt;
-              &lt;div id=&quot;-container-4&quot; class=&quot;wmre-mega-menu__container&quot;&gt;
+              &lt;div id=&quot;mega-menu-container-4&quot; class=&quot;wmre-mega-menu__container&quot;&gt;
                 &lt;div class=&quot;wmre-container&quot;&gt;
                   &lt;!-- Start submenu (level 2) --&gt;
                   &lt;ul class=&quot;wmre-mega-menu__sub-menu&quot;&gt;
@@ -215,8 +251,82 @@
         &lt;/div&gt;
         &lt;!-- End scrollable container --&gt;
         
+        &lt;div class=&quot;wmre-mega-menu__primary-menu-item wmre-mega-menu__search&quot;&gt;
+          &lt;button class=&quot;wmre-mega-menu__primary-menu-link wmre-mega-menu__search-btn&quot;&gt;
+            &lt;svg class=&quot;wmre-mega-menu__search-icon&quot;&gt;
+              &lt;title&gt;Search&lt;/title&gt;
+              &lt;use xlink:href=&quot;#wmre-general-search&quot; href=&quot;#wmre-general-search&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+            &lt;svg class=&quot;wmre-mega-menu__search-close-icon&quot;&gt;
+              &lt;title&gt;Close&lt;/title&gt;
+              &lt;use xlink:href=&quot;#wmre-general-cross&quot; href=&quot;#wmre-general-cross&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+          &lt;/button&gt;
+          &lt;div class=&quot;wmre-mega-menu__container wmre-mega-menu__search-container&quot;&gt;
+            &lt;div class=&quot;wmre-search-container&quot;&gt;
+              
+
+
+&lt;form class=&quot;wmre-search-bar&quot;&gt;
+    &lt;input aria-label=&quot;Search&quot; type=&quot;search&quot; class=&quot;wmre-search-bar__input wmre-fe-input&quot; placeholder=&quot;Site search...&quot;&gt;
+    &lt;button class=&quot;wmre-search-bar__btn&quot; types=&quot;submit&quot;&gt;
+        &lt;svg&gt;&lt;title&gt;Search&lt;/title&gt;&lt;use xlink:href=&quot;#wmre-general-search&quot; href=&quot;#wmre-general-search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/form&gt;
+
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
       &lt;/nav&gt;
     &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;wmre-container&quot;&gt;
+    &lt;!-- Phase banner --&gt;
+    &lt;div class=&quot;wmre-banner-container&quot;&gt;
+       &lt;div class=&quot;wmre-col-1&quot;&gt;
+          &lt;div class=&quot;wmre-banner-container__phase-wrapper&quot;&gt;
+             &lt;a href=&quot;http://localhost:3000/&quot; target=&quot;_self&quot; class=&quot;wmre-phase-indicator&quot; title=&quot;Beta homepage of West Midlands Rail Executive Design System&quot;&gt;
+            Beta
+          &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;p class=&quot;wmre-banner-container__text&quot;&gt;
+             This is a new service - your
+             &lt;a href=&quot;https://github.com/wmcadigital/wmca-design-system/issues&quot; title=&quot;WMCA Design System Github&quot; target=&quot;_blank&quot; class=&quot;wmre-link &quot; rel=&quot;noopener noreferrer&quot; &gt;
+            
+            feedback
+            
+          &lt;/a&gt;
+             &amp;nbsp;will help us to improve it.
+          &lt;/p&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Breadcrumbs --&gt;
+    &lt;div class=&quot;wmre-breadcrumb&quot;&gt;
+    &lt;div class=&quot;wmre-container&quot;&gt;
+    &lt;nav aria-label=&quot;Breadcrumb&quot;&gt;
+      &lt;ol class=&quot;wmre-breadcrumb__list&quot;&gt;
+        &lt;li class=&quot;wmre-breadcrumb__list-item&quot;&gt;
+          &lt;a href=&quot;http://localhost:3000/&quot; class=&quot;wmre-breadcrumb__link&quot;&gt;
+            Home
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;wmre-breadcrumb__list-item&quot;&gt;
+          &lt;a href=&quot;http://localhost:3000/patterns/&quot; class=&quot;wmre-breadcrumb__link&quot;&gt;
+            Patterns
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;wmre-breadcrumb__list-item&quot;&gt;
+          &lt;a href=&quot;http://localhost:3000/patterns/header-and-footer/&quot; class=&quot;wmre-breadcrumb__link wmre-breadcrumb__link--current&quot; aria-current=&quot;page&quot;&gt;
+            Header and footer
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
   &lt;/div&gt;
 &lt;/header&gt;
 </code></pre></div><hr><h3 id="mobile-app-header">Mobile app variant of header</h3><p>When developing a mobile app, if you are limited for space and need extra room then it is recommended to use the mobile app variant of the West Midlands Rail Executive header.</p><p>To use the mobile app variant:</p><ul><li>Add the modifier class <code class="wmre-website-inline-code">wmre-header--mobile-app</code> to the wmre-header element</li><li>Copy the code for the back button section below and insert it into your existing header</li><li>Finally, add the script for the back button in your local javascript file</li></ul><p>You will most likely want to use this with the mobile variants of the <a href="/components/breadcrumb/#mobile-app-breadcrumb" title="link title" target="_self" class="wmre-link">breadcrumb component </a>and <a href="#mobile-app-footer" title="link title" target="_self" class="wmre-link">footer pattern </a>.</p><div class="wmre-website-code-example"><h3 class="wmre-website-code-example__subtitle">Component example</h3><div class="wmre-col-1"><a href="#wmre-main-content" title="Skip to main content" target="_self" class="wmre-link wmre-header__skip-link">Skip to main content</a><header><div class="wmre-header wmre-header--mobile-app wmre-header--mega-menu"><div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between"><div class="wmre-header__vertical-align wmre-col-auto"><a class="wmre-header__logo-link" href="/" title="West Midlands Combined Authority Design System"><img class="wmre-header__logo" alt="West Midlands Rail Executive logo" src="/img/logo.svg"></a></div><nav id="" class="wmre-mega-menu"><button class="wmre-mega-menu__mobile-toggle wmre-btn wmre-btn--secondary wmre-hide-desktop" aria-expanded="false" aria-controls="-primary-menu">Menu <svg class="wmre-mega-menu__close-icon"><use xlink:href="#wmre-general-cross" href="#wmre-general-cross"></use></svg></button><div id="-primary-menu" class="wmre-mega-menu__scroll-controller"><ul class="wmre-mega-menu__primary-menu"><li class="wmre-mega-menu__primary-menu-item"><button target="_self" class="wmre-mega-menu__primary-menu-link">Styles</button> <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="Styles" aria-label="toggle Styles" aria-controls="-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button><div id="-container-1" class="wmre-mega-menu__container"><div class="wmre-container"><ul class="wmre-mega-menu__sub-menu"><li class="wmre-mega-menu__sub-menu-item"><a href="/styles/colour-palettes/" class="wmre-mega-menu__sub-menu-link">Colour palettes</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/styles/typography/" class="wmre-mega-menu__sub-menu-link">Typography</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/styles/icons/" class="wmre-mega-menu__sub-menu-link">Icons</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/styles/utility-classes/" class="wmre-mega-menu__sub-menu-link">Utility classes</a></li></ul></div></div></li><li class="wmre-mega-menu__primary-menu-item"><button target="_self" class="wmre-mega-menu__primary-menu-link">Components</button> <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="Components" aria-label="toggle Components" aria-controls="-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button><div id="-container-2" class="wmre-mega-menu__container"><div class="wmre-container"><ul class="wmre-mega-menu__sub-menu"><li class="wmre-mega-menu__sub-menu-item"><a href="/components/article-card/" class="wmre-mega-menu__sub-menu-link">Article card</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/breadcrumb/" class="wmre-mega-menu__sub-menu-link">Breadcrumb</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/buttons/" class="wmre-mega-menu__sub-menu-link">Buttons</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/content-card/" class="wmre-mega-menu__sub-menu-link">Content card</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/content-tiles/" class="wmre-mega-menu__sub-menu-link">Content tiles</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/form-elements/" class="wmre-mega-menu__sub-menu-link">Form elements</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/homepage-card/" class="wmre-mega-menu__sub-menu-link">Homepage card</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/hub-header/" class="wmre-mega-menu__sub-menu-link">Hub header</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/info-card/" class="wmre-mega-menu__sub-menu-link">Info card</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/inset-text/" class="wmre-mega-menu__sub-menu-link">Inset text</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/links/" class="wmre-mega-menu__sub-menu-link">Links</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/loader/" class="wmre-mega-menu__sub-menu-link">Loader</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/phase-indicator/" class="wmre-mega-menu__sub-menu-link">Phase indicator</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/page-header/" class="wmre-mega-menu__sub-menu-link">Page header</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/related-links/" class="wmre-mega-menu__sub-menu-link">Related links</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/share/" class="wmre-mega-menu__sub-menu-link">Share</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/station/" class="wmre-mega-menu__sub-menu-link">Station</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/team-bio/" class="wmre-mega-menu__sub-menu-link">Team bio</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/warning-text/" class="wmre-mega-menu__sub-menu-link">Warning text</a></li></ul></div></div></li><li class="wmre-mega-menu__primary-menu-item"><button target="_self" class="wmre-mega-menu__primary-menu-link">Patterns</button> <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="Patterns" aria-label="toggle Patterns" aria-controls="-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button><div id="-container-3" class="wmre-mega-menu__container"><div class="wmre-container"><ul class="wmre-mega-menu__sub-menu"><li class="wmre-mega-menu__sub-menu-item"><a href="/patterns/header-and-footer/" class="wmre-mega-menu__sub-menu-link">Header and footer</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/patterns/contact-details/" class="wmre-mega-menu__sub-menu-link">Contact details</a></li></ul></div></div></li><li class="wmre-mega-menu__primary-menu-item"><button target="_self" class="wmre-mega-menu__primary-menu-link">Templates</button> <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="Templates" aria-label="toggle Templates" aria-controls="-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button><div id="-container-4" class="wmre-mega-menu__container"><div class="wmre-container"><ul class="wmre-mega-menu__sub-menu"><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/homepage/" class="wmre-mega-menu__sub-menu-link">Homepage</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/programme/" class="wmre-mega-menu__sub-menu-link">Programme</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/newsroom/" class="wmre-mega-menu__sub-menu-link">Newsroom</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/news-article/" class="wmre-mega-menu__sub-menu-link">News article</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/project/" class="wmre-mega-menu__sub-menu-link">Project</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/projects-map/" class="wmre-mega-menu__sub-menu-link">Projects map</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/projects-list/" class="wmre-mega-menu__sub-menu-link">Projects list</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/content-page-example/" class="wmre-mega-menu__sub-menu-link">Content page example</a></li></ul></div></div></li></ul></div></nav></div></div></header></div><h3 class="wmre-website-code-example__subtitle">HTML Markup</h3><pre><code class="html" tabindex="0">&lt;!-- Skip to content link --&gt;
@@ -227,12 +337,91 @@
 &lt;/a&gt;
 &lt;!-- Main header section --&gt;
 &lt;header&gt;
+  
+
+
+
+
+
+&lt;div class=&quot;bg-white wmre-p-t-md wmre-p-b-md wmre-cookies-banner&quot;&gt;
+  &lt;div class=&quot;wmre-container&quot;&gt;
+    &lt;div class=&quot;wmre-col-1 wmre-col-md-3-4 wmre-col-lg-2-3&quot;&gt;
+      &lt;h3&gt;Your privacy settings&lt;/h3&gt;
+      &lt;p&gt;
+        If you’re happy with the use of cookies by West Midlands Combined Authority
+        and our selected partners, click ‘Accept all cookies’. Or click ‘Manage cookies’ to learn more.
+      &lt;/p&gt;
+      &lt;div class=&quot;wmre-grid wmre-grid--spacing-2-md wmre-cookies-banner__group-buttons&quot;&gt;
+        &lt;button class=&quot;wmre-btn wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24  wmre-cookies-banner__accept-all-cookies&quot; &gt;Accept all cookies
+        &lt;/button&gt;
+
+        &lt;a href=&quot;/patterns/cookies/#cookies_manager&quot; title=&quot;link title&quot; target=&quot;_self&quot; class=&quot;wmre-btn wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24&quot;&gt;
+          Manage Cookies
+        &lt;/a&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+  &lt;div class=&quot;wmre-header wmre-header--mega-menu&quot;&gt;
+    &lt;div class=&quot;wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between&quot;&gt;
+      &lt;div class=&quot;wmre-header__vertical-align wmre-col-auto&quot;&gt;
+        &lt;!-- Logo --&gt;
+        &lt;a class=&quot;wmre-header__logo-link&quot; href=&quot;/&quot; title=&quot;West Midlands Combined Authority Design System&quot;&gt;
+          &lt;img class=&quot;wmre-header__logo&quot; alt=&quot;West Midlands Combined Authority logo&quot; src=&quot;/img/logo.svg&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;!-- Header title --&gt;
+      &lt;h1 class=&quot;wmre-header__title wmre-col-1 wmre-col-sm-auto&quot;&gt;
+        Reinstate your Direct Debit&lt;br&gt;(COVID-19)
+      &lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code></pre></div><hr><h3 id="mobile-app-header">Mobile app variant of header</h3><p>When developing a mobile app, if you are limited for space and need extra room then it is recommended to use the mobile app variant of the West Midlands Rail Executive header.</p><p>To use the mobile app variant:</p><ul><li>Add the modifier class <code class="wmre-website-inline-code">wmre-header--mobile-app</code> to the wmre-header element</li><li>Copy the code for the back button section below and insert it into your existing header</li><li>Finally, add the script for the back button in your local javascript file</li></ul><p>You will most likely want to use this with the mobile variants of the <a href="/components/breadcrumb/#mobile-app-breadcrumb" title="link title" target="_self" class="wmre-link">breadcrumb component </a>and <a href="#mobile-app-footer" title="link title" target="_self" class="wmre-link">footer pattern </a>.</p><div class="wmre-website-code-example"><h3 class="wmre-website-code-example__subtitle">Component example</h3><div class="wmre-col-1"><a href="#wmre-main-content" title="Skip to main content" target="_self" class="wmre-link wmre-header__skip-link">Skip to main content</a><header><div class="bg-white wmre-p-t-md wmre-p-b-md wmre-cookies-banner"><div class="wmre-container"><div class="wmre-col-1 wmre-col-md-3-4 wmre-col-lg-2-3"><h3>Your privacy settings</h3><p>If you’re happy with the use of cookies by West Midlands Combined Authority and our selected partners, click ‘Accept all cookies’. Or click ‘Manage cookies’ to learn more.</p><div class="wmre-grid wmre-grid--spacing-2-md wmre-cookies-banner__group-buttons"><button class="wmre-btn wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24 wmre-cookies-banner__accept-all-cookies">Accept all cookies</button> <a href="/patterns/cookies/#cookies_manager" title="link title" target="_self" class="wmre-btn wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24">Manage Cookies</a></div></div></div></div><div class="wmre-header wmre-header--mobile-app wmre-header--mega-menu"><div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between"><div class="wmre-header__vertical-align wmre-col-auto"><a class="wmre-header__logo-link" href="/" title="West Midlands Combined Authority Design System"><img class="wmre-header__logo" alt="West Midlands Combined Authority logo" src="/img/logo.svg"></a></div><nav id="" class="wmre-mega-menu"><button class="wmre-mega-menu__mobile-toggle wmre-btn wmre-btn--secondary wmre-hide-desktop" aria-expanded="false" aria-controls="-primary-menu">Menu <svg class="wmre-mega-menu__close-icon"><use xlink:href="#wmre-general-cross" href="#wmre-general-cross"></use></svg></button><div id="-primary-menu" class="wmre-mega-menu__scroll-controller"><ul class="wmre-mega-menu__primary-menu"><li class="wmre-mega-menu__primary-menu-item"><button target="_self" class="wmre-mega-menu__primary-menu-link">Styles</button> <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="Styles" aria-label="toggle Styles" aria-controls="-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button><div id="-container-1" class="wmre-mega-menu__container"><div class="wmre-container"><ul class="wmre-mega-menu__sub-menu"><li class="wmre-mega-menu__sub-menu-item"><a href="/styles/colour-palettes/" class="wmre-mega-menu__sub-menu-link">Colour palettes</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/styles/typography/" class="wmre-mega-menu__sub-menu-link">Typography</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/styles/icons/" class="wmre-mega-menu__sub-menu-link">Icons</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/styles/utility-classes/" class="wmre-mega-menu__sub-menu-link">Utility classes</a></li></ul></div></div></li><li class="wmre-mega-menu__primary-menu-item"><button target="_self" class="wmre-mega-menu__primary-menu-link">Components</button> <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="Components" aria-label="toggle Components" aria-controls="-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button><div id="-container-2" class="wmre-mega-menu__container"><div class="wmre-container"><ul class="wmre-mega-menu__sub-menu"><li class="wmre-mega-menu__sub-menu-item"><a href="/components/article-card/" class="wmre-mega-menu__sub-menu-link">Article card</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/breadcrumb/" class="wmre-mega-menu__sub-menu-link">Breadcrumb</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/buttons/" class="wmre-mega-menu__sub-menu-link">Buttons</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/content-card/" class="wmre-mega-menu__sub-menu-link">Content card</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/content-tiles/" class="wmre-mega-menu__sub-menu-link">Content tiles</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/form-elements/" class="wmre-mega-menu__sub-menu-link">Form elements</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/homepage-card/" class="wmre-mega-menu__sub-menu-link">Homepage card</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/hub-header/" class="wmre-mega-menu__sub-menu-link">Hub header</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/info-card/" class="wmre-mega-menu__sub-menu-link">Info card</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/links/" class="wmre-mega-menu__sub-menu-link">Links</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/loader/" class="wmre-mega-menu__sub-menu-link">Loader</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/phase-indicator/" class="wmre-mega-menu__sub-menu-link">Phase indicator</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/page-header/" class="wmre-mega-menu__sub-menu-link">Page header</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/related-links/" class="wmre-mega-menu__sub-menu-link">Related links</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/share/" class="wmre-mega-menu__sub-menu-link">Share</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/station/" class="wmre-mega-menu__sub-menu-link">Station</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/components/team-bio/" class="wmre-mega-menu__sub-menu-link">Team bio</a></li></ul></div></div></li><li class="wmre-mega-menu__primary-menu-item"><button target="_self" class="wmre-mega-menu__primary-menu-link">Patterns</button> <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="Patterns" aria-label="toggle Patterns" aria-controls="-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button><div id="-container-3" class="wmre-mega-menu__container"><div class="wmre-container"><ul class="wmre-mega-menu__sub-menu"><li class="wmre-mega-menu__sub-menu-item"><a href="/patterns/header-and-footer/" class="wmre-mega-menu__sub-menu-link">Header and footer</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/patterns/search/" class="wmre-mega-menu__sub-menu-link">Search</a></li></ul></div></div></li><li class="wmre-mega-menu__primary-menu-item"><button target="_self" class="wmre-mega-menu__primary-menu-link">Templates</button> <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="Templates" aria-label="toggle Templates" aria-controls="-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button><div id="-container-4" class="wmre-mega-menu__container"><div class="wmre-container"><ul class="wmre-mega-menu__sub-menu"><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/homepage/" class="wmre-mega-menu__sub-menu-link">Homepage</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/programme/" class="wmre-mega-menu__sub-menu-link">Programme</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/newsroom/" class="wmre-mega-menu__sub-menu-link">Newsroom</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/news-article/" class="wmre-mega-menu__sub-menu-link">News article</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/project/" class="wmre-mega-menu__sub-menu-link">Project</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/projects-map/" class="wmre-mega-menu__sub-menu-link">Projects map</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/projects-list/" class="wmre-mega-menu__sub-menu-link">Projects list</a></li><li class="wmre-mega-menu__sub-menu-item"><a href="/templates/content-page-example/" class="wmre-mega-menu__sub-menu-link">Content page example</a></li></ul></div></div></li></ul></div></nav></div></div></header></div><h3 class="wmre-website-code-example__subtitle">HTML Markup</h3><pre><code class="html" tabindex="0">&lt;!-- Skip to content link --&gt;
+&lt;a href=&quot;#wmre-main-content&quot; title=&quot;Skip to main content&quot; target=&quot;_self&quot; class=&quot;wmre-link wmre-header__skip-link &quot;  &gt;
+  
+  Skip to main content
+  
+&lt;/a&gt;
+&lt;!-- Main header section --&gt;
+&lt;header&gt;
+  
+
+
+
+
+
+&lt;div class=&quot;bg-white wmre-p-t-md wmre-p-b-md wmre-cookies-banner&quot;&gt;
+  &lt;div class=&quot;wmre-container&quot;&gt;
+    &lt;div class=&quot;wmre-col-1 wmre-col-md-3-4 wmre-col-lg-2-3&quot;&gt;
+      &lt;h3&gt;Your privacy settings&lt;/h3&gt;
+      &lt;p&gt;
+        If you’re happy with the use of cookies by West Midlands Combined Authority
+        and our selected partners, click ‘Accept all cookies’. Or click ‘Manage cookies’ to learn more.
+      &lt;/p&gt;
+      &lt;div class=&quot;wmre-grid wmre-grid--spacing-2-md wmre-cookies-banner__group-buttons&quot;&gt;
+        &lt;button class=&quot;wmre-btn wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24  wmre-cookies-banner__accept-all-cookies&quot; &gt;Accept all cookies
+        &lt;/button&gt;
+
+        &lt;a href=&quot;/patterns/cookies/#cookies_manager&quot; title=&quot;link title&quot; target=&quot;_self&quot; class=&quot;wmre-btn wmre-btn wmre-col-1 wmre-col-sm-1 wmre-col-md-12-24&quot;&gt;
+          Manage Cookies
+        &lt;/a&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
   &lt;div class=&quot;wmre-header wmre-header--mobile-app wmre-header--mega-menu&quot;&gt;
     &lt;div class=&quot;wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between&quot;&gt;
       &lt;div class=&quot;wmre-header__vertical-align wmre-col-auto&quot;&gt;
         &lt;!-- Logo --&gt;
         &lt;a class=&quot;wmre-header__logo-link&quot; href=&quot;/&quot; title=&quot;West Midlands Combined Authority Design System&quot;&gt;
-          &lt;img class=&quot;wmre-header__logo&quot; alt=&quot;West Midlands Rail Executive logo&quot; src=&quot;/img/logo.svg&quot; /&gt;
+          &lt;img class=&quot;wmre-header__logo&quot; alt=&quot;West Midlands Combined Authority logo&quot; src=&quot;/img/logo.svg&quot; /&gt;
         &lt;/a&gt;
       &lt;/div&gt;
       &lt;!-- Mega menu nav items--&gt;

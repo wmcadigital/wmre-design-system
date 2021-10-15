@@ -1,0 +1,45 @@
+{% macro wmreDisruptionIndicatorMedium(params) %}
+{% from "wmre/components/icon/_icon.njk" import wmreIcon %}
+
+{% set strongText = params.strongText if params.strongText else "Indicator text" %} {# set button text #}
+{% set iconRight = params.iconRight if params.iconRight %} {# set icon right classes #}
+{% set iconLeft = params.iconLeft if params.iconLeft %} {# set svg left reference #}
+{% set text = params.text if params.text else 'X15' %} {# set text, or default to X15 #}
+
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+{% set iconClassModifier = ' wmre-disruption-indicator-medium--with-icon' if ( params.iconLeft or params.iconRight ) %}
+
+{{params.comment | safe}}
+<div class="wmre-disruption-indicator-medium{{iconClassModifier}}{{class}}">
+  {%- if iconLeft %}
+  {# Get SVG icon -#}
+  {{
+    wmreIcon({
+      icon: iconLeft,
+      class: 'wmre-disruption-indicator-medium__icon wmre-disruption-indicator-medium__icon--left'
+    }) | indent(2) | trim
+  }}
+  {%- endif %}
+  {{ text }}
+  {% if iconRight === 'general-trash' -%}
+  <button class="wmre-disruption-indicator-medium__btn" aria-label="Delete favourite - bus - {{ text }}">
+    {#- Get SVG icon -#}
+    {{
+      wmreIcon({
+        icon: iconRight,
+        class: 'wmre-disruption-indicator-medium__icon'
+      }) | indent(4) | trim
+    }}
+  </button>
+  {%- elif iconRight -%}
+  {#- Get SVG icon -#}
+  {{
+    wmreIcon({
+      icon: iconRight,
+      class: 'wmre-disruption-indicator-medium__icon wmre-disruption-indicator-medium__icon--right'
+    }) | indent(2) | trim
+  }}
+  {%- endif %}
+</div>
+
+{% endmacro %}
