@@ -5,8 +5,8 @@ const headerJs = () => {
   const mobileMenu = window.matchMedia('(max-width: 992px)');
 
   /* 
-        Mega menu helper functions
-    */
+      Mega menu helper functions
+  */
 
   // getMenuLink returns a specified menu link from a specified array
   // currentIndex = index of the link that is currently focused
