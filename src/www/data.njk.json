@@ -24,9 +24,6 @@
           "name": "Accordion"
         },
         {
-          "name": "Article card"
-        },
-        {
           "name": "Breadcrumb"
         },
         {
@@ -36,22 +33,13 @@
           "name": "Content card"
         },
         {
-          "name": "Content Tiles"
-        },
-        {
           "name": "File Download"
         },
         {
           "name": "Form elements"
         },
         {
-          "name": "Homepage card"
-        },
-        {
           "name": "Hub header"
-        },
-        {
-          "name": "Info card"
         },
         {
           "name": "Inset text"
@@ -67,16 +55,7 @@
         },
         {
           "name": "Page header"
-        },
-        {
-          "name": "Related links"
-        },                
-        {
-          "name": "Share"
-        }, 
-        {
-          "name": "Station"
-        },                
+        },                   
         {
           "name": "Team bio"
         },
