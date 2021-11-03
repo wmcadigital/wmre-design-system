@@ -21,7 +21,7 @@
       "name": "Components",
       "subnavItems": [
         {
-          "name": "Article card"
+          "name": "Accordion"
         },
         {
           "name": "Breadcrumb"
@@ -33,20 +33,17 @@
           "name": "Content card"
         },
         {
-          "name": "Content Tiles"
+          "name": "File Download"
         },
         {
           "name": "Form elements"
         },
         {
-          "name": "Homepage card"
-        },
-        {
           "name": "Hub header"
         },
         {
-          "name": "Info card"
-        },                
+          "name": "Inset text"
+        },       
         {
           "name": "Links"
         },
@@ -58,18 +55,12 @@
         },
         {
           "name": "Page header"
-        },
-        {
-          "name": "Related links"
-        },                
-        {
-          "name": "Share"
-        }, 
-        {
-          "name": "Station"
-        },                
+        },                   
         {
           "name": "Team bio"
+        },
+        {
+          "name": "Warning text"
         }
       ]
     },
@@ -80,7 +71,7 @@
           "name": "Header and footer"
         },
         {
-          "name": "Cookies"
+          "name": "Contact details"
         },
         {
           "name": "Search"
