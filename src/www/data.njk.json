@@ -21,9 +21,6 @@
       "name": "Components",
       "subnavItems": [
         {
-          "name": "Accordion"
-        },
-        {
           "name": "Article card"
         },
         {
@@ -39,9 +36,6 @@
           "name": "Content Tiles"
         },
         {
-          "name": "File Download"
-        },
-        {
           "name": "Form elements"
         },
         {
@@ -52,10 +46,7 @@
         },
         {
           "name": "Info card"
-        },
-        {
-          "name": "Inset text"
-        },       
+        },                
         {
           "name": "Links"
         },
@@ -79,9 +70,6 @@
         },                
         {
           "name": "Team bio"
-        },
-        {
-          "name": "Warning text"
         }
       ]
     },
@@ -92,10 +80,7 @@
           "name": "Header and footer"
         },
         {
-          "name": "Contact details"
-        },
-        {
-          "name": "Search"
+          "name": "Cookies"
         }
       ]
     },
