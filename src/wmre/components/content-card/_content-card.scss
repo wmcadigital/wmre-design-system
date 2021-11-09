@@ -29,17 +29,22 @@
   h2,
   h3 {
     color: get-color(primary);
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   h2 a,
   h3 a {
     color: get-color(cta);
     font-size: inherit;
+    text-decoration: underline;
   }
 
   p {
     font-weight: normal;
+  }
+
+  .wmre-btn {
+    background-color: get-color(cta);
   }
 
   // Modifiers

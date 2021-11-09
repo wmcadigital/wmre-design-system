@@ -383,6 +383,7 @@ $header-height-mobile: 4rem;
       align-items: center;
 
       .wmre-mega-menu__sub-menu-link {
+        max-width: 75%;
         flex-grow: 1;
       }
 
@@ -455,6 +456,7 @@ $header-height-mobile: 4rem;
     }
 
     &__sub-menu-child-link {
+      display: inline-block;
       padding: 0 $size-md;
       color: get-color(text);
       font-size: $size-md;
@@ -621,8 +623,9 @@ $header-height-mobile: 4rem;
           position: relative;
           margin-bottom: $size-sm;
           padding-left: $size-lg;
-          color: get-color(text);
+          color: get-color(primary);
           font-size: 1.125rem;
+          font-weight: 700;
           text-decoration: none;
         }
 
@@ -665,6 +668,7 @@ $header-height-mobile: 4rem;
       display: block;
       margin-bottom: $size-sm;
       color: get-color(text);
+      font-weight: 400;
       text-decoration: none;
 
       &:hover,
