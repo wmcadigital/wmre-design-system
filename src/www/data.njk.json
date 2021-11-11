@@ -21,22 +21,33 @@
       "name": "Components",
       "subnavItems": [
         {
-          "name": "Accordion"
+          "name": "Interactive",
+          "subnavItems": [
+            {
+              "name": "Accordion"
+            },
+            {
+              "name": "Buttons"
+            },
+            {
+              "name": "Content card"
+            },
+            {
+              "name": "File Download"
+            },
+            {
+              "name": "Form elements"
+            },
+            {
+              "name": "Links"
+            }
+          ]
         },
         {
+          "name": "Static",
+          "subnavItems": [
+            {
           "name": "Breadcrumb"
-        },
-        {
-          "name": "Buttons"
-        },
-        {
-          "name": "Content card"
-        },
-        {
-          "name": "File Download"
-        },
-        {
-          "name": "Form elements"
         },
         {
           "name": "Hub header"
@@ -44,9 +55,7 @@
         {
           "name": "Inset text"
         },       
-        {
-          "name": "Links"
-        },
+        
         {
           "name": "Loader"
         },
@@ -61,6 +70,8 @@
         },
         {
           "name": "Warning text"
+        }
+          ]
         }
       ]
     },

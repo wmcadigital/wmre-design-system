@@ -192,9 +192,9 @@ $header-height-mobile: 4rem;
   }
 
   &__sub-menu-link {
-    color: get-color(text) !important;
-    font-family: $x-font-family !important;
-    font-weight: normal !important;
+    color: get-color(primary);
+    font-family: $x-font-family;
+    font-weight: bold;
   }
 
   &__search-icon {
