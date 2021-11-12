@@ -43,22 +43,19 @@
         },
         {
           "name": "Inset text"
-        },       
+        },  
         {
           "name": "Links"
-        },
+        },   
         {
           "name": "Loader"
         },
         {
-          "name": "Phase indicator"
-        },
-        {
           "name": "Page header"
-        },                   
-        {
-          "name": "Team bio"
         },
+        {
+          "name": "Phase indicator"
+        },                   
         {
           "name": "Warning text"
         }
@@ -113,10 +110,26 @@
       "name": "About us",
       "subnavItems": [
         {
-          "name": "Homepage"
+          "name": "Sub Menu"
         },
         {
-          "name": "Programme"
+          "name": "Sub Menu",
+          "subnavItems": [
+            {
+              "name": "Child Item"
+            },
+            {
+              "name": "Child Item"
+            }  
+          ]
+        },
+        {
+          "name": "Sub menu",
+          "subnavItems": [
+            {
+              "name": "Child Item"
+            }
+          ]
         }
       ]
 		},
