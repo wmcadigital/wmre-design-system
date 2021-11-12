@@ -47,30 +47,26 @@
           "name": "Static",
           "subnavItems": [
             {
-          "name": "Breadcrumb"
-        },
-        {
-          "name": "Hub header"
-        },
-        {
-          "name": "Inset text"
-        },       
-        
-        {
-          "name": "Loader"
-        },
-        {
-          "name": "Phase indicator"
-        },
-        {
-          "name": "Page header"
-        },                   
-        {
-          "name": "Team bio"
-        },
-        {
-          "name": "Warning text"
-        }
+              "name": "Breadcrumb"
+            },
+            {
+              "name": "Hub header"
+            },
+            {
+              "name": "Inset text"
+            },       
+            {
+              "name": "Loader"
+            },
+            {
+              "name": "Phase indicator"
+            },
+            {
+              "name": "Page header"
+            },                   
+            {
+              "name": "Warning text"
+            }
           ]
         }
       ]
