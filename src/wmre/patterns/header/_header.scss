@@ -188,13 +188,14 @@ $header-height-mobile: 4rem;
     color: get-color(text);
     background-color: transparent;
     line-height: 1.5;
+    font-weight: normal;
     text-decoration: none;
   }
 
   &__sub-menu-link {
     color: get-color(primary);
     font-family: $x-font-family;
-    font-weight: bold;
+    font-weight: normal;
   }
 
   &__search-icon {
@@ -289,6 +290,19 @@ $header-height-mobile: 4rem;
 
       .wmre-container {
         padding: 0;
+      }
+    }
+
+    &__sub-menu {
+      &--has-child-menus {
+        
+        .wmre-mega-menu__sub-menu-link {
+          font-weight: bold;
+        }
+
+        .wmre-mega-menu__sub-menu-link-icon {
+          display: block;
+        }
       }
     }
 
@@ -460,6 +474,7 @@ $header-height-mobile: 4rem;
       padding: 0 $size-md;
       color: get-color(text);
       font-size: $size-md;
+      font-weight: normal;
       text-decoration: none;
     }
 
@@ -564,7 +579,7 @@ $header-height-mobile: 4rem;
     &__primary-menu-item {
 
       button {
-        font-weight: 700;
+        font-weight: bold;
       }
 
       &.active {
@@ -586,6 +601,7 @@ $header-height-mobile: 4rem;
       color: $white !important;
       font-family: $x-heading-font-family;
       font-size: 1rem;
+      font-weight: bold;
       cursor: pointer;
 
       &:hover,
@@ -625,7 +641,7 @@ $header-height-mobile: 4rem;
           padding-left: $size-lg;
           color: get-color(primary);
           font-size: 1.125rem;
-          font-weight: 700;
+          font-weight: bold;
           text-decoration: none;
         }
 
@@ -668,7 +684,7 @@ $header-height-mobile: 4rem;
       display: block;
       margin-bottom: $size-sm;
       color: get-color(text);
-      font-weight: 400;
+      font-weight: normal;
       text-decoration: none;
 
       &:hover,
@@ -678,6 +694,8 @@ $header-height-mobile: 4rem;
     }
   }
 }
+
+
 
 @media screen and (max-width: $breakpoint-md - 1) {
   .wmre-mega-menu__search-container {
@@ -716,7 +734,7 @@ $header-height-mobile: 4rem;
   .wmre-search-heading {
     margin: $size-lg 0;
     font-family: $x-heading-font-family;
-    font-weight: 700;
+    font-weight: bold;
   }
 
   .wmre-search-list {
