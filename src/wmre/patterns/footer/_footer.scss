@@ -89,7 +89,6 @@
 
   //
   .wmre-footer__menu {
-    margin: 0;
     padding: 0;
 
     @media screen and (max-width: $breakpoint-md - 1) {
@@ -99,10 +98,6 @@
     li {
       margin-bottom: $size-sm;
       list-style: none;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 
@@ -146,6 +141,7 @@
     .wmre-footer__copyright {
       margin: 0;
       font-family: $x-heading-font-family;
+      font-weight: bold;
     }
   }
 
