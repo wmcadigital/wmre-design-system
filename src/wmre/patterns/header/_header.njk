@@ -2,9 +2,16 @@
 {# Set navItems #}
 {% set navItems = params.navItems %}
 {% set appClass = " wmre-header--mobile-app" if params.app else "" %}
+{% set menuClass = "" if params.legacyMenu else " wmre-header--mega-menu" %}
+
+{% set navigationAriaLabel = params.exampleAria + " example navigation" if params.exampleAria else "Navigation" %}
 {# Imports #}
-{% from "wmre/components/phase-indicator/_phase-indicator.njk" import wmrePhaseIndicator %}
+{% from "wmre/components/icon/_icon.njk" import wmreIcon %}
 {% from "wmre/components/link/link/_link.njk" import wmreLink %}
+{% from "wmre/patterns/banner/_banner.njk" import wmreBanner %}
+{% from "wmre/components/breadcrumb/_breadcrumb.njk" import wmreBreadcrumb %}
+{% from "wmre/patterns/cookies/cookies-banner/_cookies-banner.njk" import wmreCookiesBanner %}
+{% from "wmre/patterns/search/search-bar/_search-bar.njk" import wmreSearchbar %}
 
 <!-- Skip to content link -->
 {{
@@ -16,57 +23,186 @@
   }) | trim
 }}
 <!-- Main header section -->
-<header class="wmre-header{{appClass}}">
-  <div class="menuwrap wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between">
-    <!-- Logo -->
-    <a class="logo" href="$*cdn/" title="West Midlands Rail Executive Design System">
-      <img alt="West Midlands Rail Executive logo" src="$*cdn/img/wmre-nav-logo.png" />
-    </a>    
-    <a class="menu" onclick="this.nextElementSibling.classList.add('mini-nav');event.stopPropagation()">☰</a>
-    {#- If with a title #}
-    {% if params.withTitle -%}
-    <!-- Header title -->
-    <h1 class="wmre-header__title wmre-col-1 wmre-col-sm-auto">
-      Reinstate your Direct Debit<br>(COVID-19)
-    </h1>
-    {%- else %}
-    {#- Else with a navigation -#}
-    <!-- Nav items -->
-    <nav>
-      {% for navItem in navItems -%}
-        <a href="$*cdn/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self">
-          {{ navItem.name}}
+<header>
+  {{
+    wmreCookiesBanner()
+  }}
+  <div class="wmre-header{{appClass}}{{menuClass}}">
+    <div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between">
+      <div class="wmre-header__vertical-align wmre-col-auto">
+        <!-- Logo -->
+        <a class="wmre-header__logo-link" href="/" title="West Midlands Combined Authority Design System">
+          <img class="wmre-header__logo" alt="West Midlands Combined Authority logo" src="/img/logo.svg" />
         </a>
-      {%- endfor %}
-
-      {%- if params.app %}
-      <!-- Back button -->
-      <ul class="wmre-header__links wmre-header__back-btn">
-        <li class="wmre-header__link">
-          <a
-            href="#"
-            title="Go back to previous page"
-            target="_self"
-            class="wmre-link"
-            onClick="goBack(event);"
-          >
-            Back
-          </a>
-        </li>
-      </ul>
-      <script>
-        // Function that sends user to previous page they were on,
-        // This can be included in your local javascript file
-        function goBack(e) {
-          e.preventDefault();
-          window.history.back();
-        }
-      </script>
-      <!-- End back button -->
+      </div>
+      {#- If with a title #}
+      {% if params.withTitle -%}
+      <!-- Header title -->
+      <h1 class="wmre-header__title wmre-col-1 wmre-col-sm-auto">
+        Reinstate your Direct Debit<br>(COVID-19)
+      </h1>
+      {%- else -%}
+      <!-- Mega menu nav items-->
+      <nav id="{{params.id}}" class="wmre-mega-menu">
+        <!-- Mobile toggle button -->
+        <button class="wmre-mega-menu__mobile-toggle wmre-btn wmre-btn--secondary wmre-hide-desktop" aria-expanded="false" aria-controls="{{params.id}}-primary-menu">Menu
+          <svg class="wmre-mega-menu__close-icon"><use xlink:href="#wmre-general-cross" href="#wmre-general-cross"></use></svg>
+        </button>
+        <!-- Container for mega menu - allows scrolling on mobile nav -->
+        <div id="{{params.id}}-primary-menu" class="wmre-mega-menu__scroll-controller">
+          <!-- Start primary (level 1) navigation -->
+          <ul class="wmre-mega-menu__primary-menu">
+          {% for navItem in navItems -%}
+            <li class="wmre-mega-menu__primary-menu-item">
+            <!-- Show swift logo in nav if is swift & tickets link -->
+            {% set navItemIcon = wmreIcon({icon: 'swift-full-logo', class: 'wmre-swift-icon'}) | indent(4) | trim if navItem.name === "Swift and tickets" else "" %}
+            {% set navItemContent = " and tickets" if navItem.name === "Swift and tickets" else navItem.name -%}
+              <!-- allow primary (level 1) item to link if specified -->
+              {% if params.linkTopLevel -%}{{navItemIcon}}
+              <a href="$*baseUrl{% if params.template %}#{% endif %}{% if not params.template %}/{{ navItem.name | lower | replace(" ", "-") }}/{% endif %}" title="{{ navItem.name }} page" target="_self" class="wmre-mega-menu__primary-menu-link" >
+                {{navItemIcon}}{{ navItemContent }}
+              </a>
+              <!-- if not linked use a button -->
+              {% else -%}
+              <button target="_self" class="wmre-mega-menu__primary-menu-link" >
+                {{navItemIcon}}{{ navItemContent }}
+              </button>
+              {% endif -%}
+              {% if navItem.subnavItems -%}
+              <!-- arrow icon for mobile nav -->
+              <button class="wmre-mega-menu__link-arrow-icon-btn" data-label="{{ navItem.name }}" aria-label="toggle {{ navItem.name }}" aria-controls="{{params.id}}-container"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button>
+              <!-- Start mega menu container -->
+              <div id="{{params.id}}-container-{{ loop.index }}" class="wmre-mega-menu__container">
+                <div class="wmre-container">
+                  <!-- Start submenu (level 2) -->
+                  <ul class="wmre-mega-menu__sub-menu">
+                    {% for subnavItem in navItem.subnavItems -%}
+                    <li class="wmre-mega-menu__sub-menu-item">
+                      <a href="$*baseUrl{% if params.template %}#{% endif %}{% if not params.template %}/{{ navItem.name | lower | replace(" ", "-") }}/{{ subnavItem.name | lower | replace(" ", "-") }}/{% endif %}" class="wmre-mega-menu__sub-menu-link">
+                        {% if subnavItem.icon -%}
+                        <!-- Show submenu (level 2) item icon if specified -->
+                        <svg class="wmre-mega-menu__sub-menu-link-icon">
+                          <use xlink:href="#wmre-{{subnavItem.icon}}" href="#wmre-{{subnavItem.icon}}"></use>
+                        </svg>
+                        {% endif -%}
+                        {{subnavItem.name| capitalize | replace("Swift", wmreIcon({icon: 'swift-full-logo', class: 'wmre-swift-icon'}) | indent(6) | trim) | safe}}</a>
+                        {%- if subnavItem.subnavItems %}
+                        <!-- collapse button for mobile nav level 3 menu items -->
+                      <button class="wmre-mega-menu__collapse-toggle" aria-expanded="false" aria-label="Toggle {{subnavItem.name}} menu" aria-controls="{{params.id}}-submenu-child-menu"><svg class="wmre-mega-menu__link-arrow-icon"><use xlink-href="#wmre-general-chevron-right" href="#wmre-general-chevron-right"></use></svg></button>
+                      <!-- Start submenu child (level 3) list -->
+                      <ul id="{{params.id}}-submenu-child-menu-{{ subnavItem.name | lower | replace(" ", "-") }}-{{ loop.index }}" class="wmre-mega-menu__sub-menu-child-menu">
+                        {% for subnavchildItem in subnavItem.subnavItems -%}
+                        <li class="wmre-mega-menu__sub-menu-child-item">
+                          <a href="#" class="wmre-mega-menu__sub-menu-child-link">{{subnavchildItem.name | capitalize}}</a>
+                        </li>
+                        {%- endfor %}
+                      </ul>
+                      <!-- End submenu child (level 3) list -->
+                      {%- endif %}
+                    </li>
+                    {%- endfor %}
+                  </ul>
+                  <!-- End submenu (level 2) -->
+                </div>
+              </div>
+              <!-- End mega menu container -->
+              {%- endif %}
+            </li>
+          {%- endfor %}
+          </ul>
+          <!-- End primary (level 1) navigation -->
+        </div>
+        <!-- End scrollable container -->
+        {% if(params.search) %}
+        <div class="wmre-mega-menu__primary-menu-item wmre-mega-menu__search">
+          <button class="wmre-mega-menu__primary-menu-link wmre-mega-menu__search-btn">
+            <svg class="wmre-mega-menu__search-icon">
+              <title>Search</title>
+              <use xlink:href="#wmre-general-search" href="#wmre-general-search"></use>
+            </svg>
+            <svg class="wmre-mega-menu__search-close-icon">
+              <title>Close</title>
+              <use xlink:href="#wmre-general-cross" href="#wmre-general-cross"></use>
+            </svg>
+          </button>
+          <div class="wmre-mega-menu__container wmre-mega-menu__search-container">
+            <div class="wmre-search-container">
+              {{wmreSearchbar()}}
+              {%- if(params.searchSuggestions) %}
+              <p class="wmre-search-heading h1">I want to...</p>
+              <div class="wmre-grid">
+                <div class="wmre-col-1-2">
+                  <ul class="wmre-search-list">
+                  {%- for i in range(0, 4) %}
+                    <li class="wmre-search-list__item">
+                      <a href="#" class="wmre-link wmre-link--with-chevron">{{params.searchSuggestions[i]}}
+                        {{wmreIcon({
+                          class: 'wmre-link__chevron wmre-link__chevron--right',
+                          icon: 'general-chevron-right'
+                        })}}
+                      </a>
+                    </li>
+                  {%- endfor %}
+                  </ul>
+                </div>
+                <div class="wmre-col-1-2">
+                  <ul class="wmre-search-list">
+                  {%- for i in range(4, params.searchSuggestions.length) %}
+                    <li class="wmre-search-list__item">
+                      <a href="#" class="wmre-link wmre-link--with-chevron">{{params.searchSuggestions[i]}}
+                        {{wmreIcon({
+                          class: 'wmre-link__chevron wmre-link__chevron--right',
+                          icon: 'general-chevron-right'
+                        })}}
+                      </a>
+                    </li>
+                  {%- endfor %}
+                  </ul>
+                </div>
+              </div>
+              {%- endif %}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </nav>
       {%- endif %}
-    </nav>
+    </div>
+  </div>
+
+
+  {%- if params.banner or params.breadcrumbs %}
+  <div class="wmre-container">
+    {% if params.banner -%}
+    <!-- Phase banner -->
+    {{
+      wmreBanner ({
+        link: 'https://github.com/wmcadigital/wmca-design-system/issues',
+        linkTitle: 'WMCA Design System Github',
+        phase: true
+      }) | trim | indent(4)
+    -}}
+    {%- endif -%}
+
+    {%- if params.breadcrumbs and params.breadcrumbs.section != 'Home' %}
+    <!-- Breadcrumbs -->
+    {{
+      wmreBreadcrumb({
+        section: params.breadcrumbs.section,
+        pageTitle: params.breadcrumbs.pageTitle,
+        exampleAria: params.exampleAria
+      }) | trim | indent(4)
+    -}}
     {% endif %}
   </div>
+  {%- endif %}
 </header>
 
+{% if params.megaMenuDemo %}
+<!-- Content space for example purposes only. DO NOT INCLUDE -->
+<div class="demo-content">
+  <p>Example content <br> <a href="$*baseUrl/patterns/header-demo" target="_blank">View full page example (opens in new window)</a></p>
+</div>
+<!-- END DO NOT INCLUDE -->
+{% endif %}
 {% endmacro %}

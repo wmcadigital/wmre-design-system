@@ -14,19 +14,19 @@
   {% set classNames = paramClass if paramClass %}
 {% endif %}
 
-<button class="wmre-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %}>
+<button class="wmre-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %} {% if params.type %}type="{{params.type}}"{% endif %}>
     {#- iconLeft -#}
-    {% if iconLeft %}
+    {%- if iconLeft %}
     {{
       wmreIcon({
         icon: iconLeft,
         class: 'wmre-btn__icon'
       }) | indent | trim
     }}
-    {{ text -}}
+    {{text}}
 
     {#- iconRight -#}
-    {% elseif iconRight -%}
+    {%- elseif iconRight %}
     {{ text }}
     {{
       wmreIcon({
@@ -35,22 +35,19 @@
       }) | indent | trim
     }}
 
-    {%- elseif params.loading %}
-    {{ text }}
     {#- Loading spinner -#}
+    {%- elseif params.loading %}
+    {{ text -}}
     {{
       wmreLoader({
         customClass: 'wmre-btn__icon wmre-btn__icon--right',
         size: 'btn'
-      }) | indent(2) | trim
+      }) | indent | trim
     }}
 
-
-
     {#- noIcon -#}
-    {% else -%}
-    {{text}}
-    {%- endif %}
+    {%- else %}
+    {{ text -}}
+    {% endif %}
 </button>
-
 {% endmacro %}

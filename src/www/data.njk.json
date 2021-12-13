@@ -21,7 +21,7 @@
       "name": "Components",
       "subnavItems": [
         {
-          "name": "Article card"
+          "name": "Accordion"
         },
         {
           "name": "Breadcrumb"
@@ -30,37 +30,34 @@
           "name": "Buttons"
         },
         {
-          "name": "Content Tiles"
+          "name": "Content card"
+        },
+        {
+          "name": "File Download"
         },
         {
           "name": "Form elements"
         },
         {
-          "name": "Homepage card"
+          "name": "Hub header"
         },
         {
-          "name": "Info card"
-        },                
+          "name": "Inset text"
+        },  
         {
           "name": "Links"
-        },
+        },   
         {
           "name": "Loader"
         },
         {
-          "name": "Phase indicator"
+          "name": "Page header"
         },
         {
-          "name": "Related links"
-        },                
+          "name": "Phase indicator"
+        },                   
         {
-          "name": "Share"
-        }, 
-        {
-          "name": "Station"
-        },                
-        {
-          "name": "Team bio"
+          "name": "Warning text"
         }
       ]
     },
@@ -69,10 +66,86 @@
       "subnavItems": [
         {
           "name": "Header and footer"
+        },
+        {
+          "name": "Contact details"
+        },
+        {
+          "name": "Search"
+        }
+      ]
+    },
+    {
+      "name": "Templates",
+      "subnavItems": [
+        {
+          "name": "Homepage"
+        },
+        {
+          "name": "Programme"
+        },
+        {
+          "name": "Newsroom"
+        },
+        {
+          "name": "News Article"
+        },
+        {
+          "name": "Project"
+        },
+        {
+          "name": "Projects map"
+        },
+        {
+          "name": "Projects list"
+        },
+        {
+          "name": "Content page example"
         }
       ]
     }
   ],
+  "templateNavItems": [
+		{
+      "name": "About us",
+      "subnavItems": [
+        {
+          "name": "Sub Menu"
+        },
+        {
+          "name": "Sub Menu",
+          "subnavItems": [
+            {
+              "name": "Child Item"
+            },
+            {
+              "name": "Child Item"
+            }  
+          ]
+        },
+        {
+          "name": "Sub menu",
+          "subnavItems": [
+            {
+              "name": "Child Item"
+            }
+          ]
+        }
+      ]
+		},
+		{
+			"name": "Partnerships"
+		},
+		{
+			"name": "Community rail"
+		},
+		{
+			"name": "News"
+		},
+		{
+			"name": "Contact us"
+		}
+	],
   "colors": {
     "brand": [
       { "varName": "primary", "name": "Primary Teal" },

@@ -1,15 +1,36 @@
 {% macro wmreLink(params) %}
+{# Imports #}
+{% from "wmre/components/icon/_icon.njk" import wmreIcon %}
 {# Set vars #}
 {% set text = params.text if params.text else "link text" %} {# set link text #}
+{% set copy = params.copy if params.copy else "<p>Reveal some hidden content</p>" %} {# set link copy #}
+{% set copyName = params.copyName if params.copyName else "example" %} {# set link copy id #}
 {% set link = params.link if params.link else "#" %} {# set link url #}
 {% set linkTitle = params.linkTitle if params.linkTitle else "link title" %} {# set link title #}
 {% set linkTarget = params.linkTarget if params.linkTarget else "_self" %} {# set link target #}
 {% set linkRel = "noopener noreferrer" if params.linkTarget === "_blank" %} {# if target is blank then add rel noopener noreferrer to link #}
+{% set prefix = "< " if params.isBackLink else "" %} {# set prefix text #}
+{# Class modifiers #}
 {% set class = ' ' + params.classModifiers if params.classModifiers %}
+{% set class = class + " wmre-link--with-chevron" if params.withChevronLeft or params.withChevronRight else class %}
 
+{% if params.withReadMore -%}
+<div class="collapse {{params.copyName}}">
+  {{copy | safe}}
+</div>
+{%- endif %}
 
-<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmre-link{{class}}" {% if linkRel %}rel="{{linkRel}}"{% endif %}>
-  {{- text -}}
+<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmre-link{{class}} {% if params.withReadMore %}hvr-icon-hang{% endif %}" {% if linkRel %}rel="{{linkRel}}"{% endif %} {% if params.withReadMore %}data-toggle="collapse" data-target=".collapse.{{params.copyName}}" data-text="collapse" aria-expanded="false" data-html-text="View more" {% endif %}>
+  {% if params.withChevronLeft -%}
+  {{ wmreIcon({ icon: "general-chevron-right", class: "wmre-link__chevron wmre-link__chevron--left" }) | indent(4) | trim }}
+  {%- endif %}
+  {% if params.withReadMore -%}
+  {{ wmreIcon({ icon: "general-chevron-right", class: "wmre-link__chevron wmre-link__chevron--down hvr-icon" }) | indent(4) | trim }}
+  {%- endif %}
+  {{- prefix -}}{% if not params.withReadMore %}{{- text -}}{% endif %}
+  {% if params.withChevronRight -%}
+  {{ wmreIcon({ icon: "general-chevron-right", class: "wmre-link__chevron wmre-link__chevron--right" }) | indent(4) | trim }}
+  {%- endif %}
 </a>
 
 {% endmacro %}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="wmre-html">
+  <!-- Head -->
+  {% include "www/_partials/_template_head.njk" %}
+  <!-- end: Head -->
+
+  <body class="wmre-body">
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and
+        security.
+      </p>
+    <![endif]-->
+
+    {# header #}
+    {% from "wmre/patterns/header/_header.njk" import wmreHeader %}
+    {{
+      wmreHeader ({
+        id: "mega-menu",
+        navItems: templateNavItems,
+        banner: false,
+        linkTopLevel: true,
+        search: true,
+        template: true,
+        breadcrumbs: {
+          section: section,
+          pageTitle: pageTitle
+        }
+      })
+    }}
+    {# header #}
+
+    {# main #}
+    <main class="wmre-container--main {% if(params.tempCampaign) %} wmre-m-r-lg {% endif %}">
+      {% block body %}{% endblock %}
+      {{params}}
+    </main>
+    {# main #}
+
+    <!-- footer -->
+    {% from "wmre/patterns/footer/_footer.njk" import wmreFooter %}
+    {{
+      wmreFooter({
+      social: true,
+      menu1: {
+        name: "About us",
+        menuItems: [{
+          name: "Contact us"
+        },{
+          name: "Careers"
+        },{
+          name: "Freedom of Information"
+        }]
+      },
+      bottomMenu: [{
+        name: "Accessibility"
+      },
+      {
+        name: "Privacy Statement"
+      },
+      {
+        name: "Terms and Conditions"
+      }]
+    })
+    }}
+    <!-- footer -->
+
+    <!-- Scripts -->
+    {% include "www/_partials/_scripts.njk" %}
+    <!-- end: Scripts -->
+  </body>
+
+</html>

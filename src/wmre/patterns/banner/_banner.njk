@@ -1,0 +1,83 @@
+{% macro wmreBanner(params) %}
+{# Imports #}
+{% from "wmre/components/phase-indicator/_phase-indicator.njk" import wmrePhaseIndicator %}
+{% from "wmre/components/link/link/_link.njk" import wmreLink %}
+{% from "wmre/components/icon/_icon.njk" import wmreIcon %}
+
+{# Set vars #}
+{% set link = params.link if params.link %} {# set button text #}
+{% set linkTitle = params.linkTitle if params.linkTitle %} {# set button text #}
+{# Emergency vars #}
+{% set emergencyModifier = " wmre-banner-container--emergency" if params.emergency %}
+{% set emergencyTitle = params.emergencyTitle or "Emergency notification title" %}
+{% set titleColClass = "wmre-col-xl-20-24" if params.onPage else "wmre-col-xl-10-24" %}
+
+
+<div class="wmre-banner-container{{emergencyModifier}}">
+   {% if params.emergency -%}
+   <div class="wmre-container wmre-grid wmre-grid--align-center">
+      <div class="wmre-col-xl-1-24 wmre-col-1-2 wmre-banner-container__emergency-icon-col">
+      {{
+         wmreIcon({
+            class: "wmre-banner-container__emergency-icon-error",
+            icon: "general-warning-triangle"
+         }) | indent(8) | trim
+      }}
+      </div>
+      <div class="{{titleColClass}} wmre-col-1 wmre-banner-container__emergency-title-col">
+         <h2 class="h4 wmre-m-b-none">{{emergencyTitle}}</h2>
+      </div>
+      {% if not params.onPage -%}
+      <div class="wmre-col-xl-10-24 wmre-col-1 wmre-banner-container__emergency-link-col">
+         <a href="#" target="_self" class="wmre-link wmre-banner-container__emergency-link">
+            Read our latest advice
+            {{
+               wmreIcon({
+                  class: "wmre-banner-container__emergency-icon wmre-m-l-sm",
+                  icon: "general-chevron-right"
+               }) | indent(12) | trim
+            }}
+         </a>
+      </div>
+      {%- endif %}
+      <div class="wmre-col-xl-3-24 wmre-col-1-2 wmre-banner-container__emergency-close-col">
+         <button class="wmre-banner-container__emergency-close">
+         Close
+         {{
+            wmreIcon({
+               class: "wmre-banner-container__emergency-icon wmre-m-l-sm",
+               icon: "general-cross"
+            }) | indent(12) | trim
+         }}
+         </button>
+      </div>
+   </div>
+   {% else -%}
+   <div class="wmre-col-1">
+      {% if params.phase -%}
+      <div class="wmre-banner-container__phase-wrapper">
+         {{
+            wmrePhaseIndicator() | indent(6) | trim
+         }}
+      </div>
+      {% endif -%}
+      {#- Banner content -#}
+      {% if params.html -%}
+      {{- html | safe -}}
+      {%- else -%}
+      <p class="wmre-banner-container__text">
+         This is a new service - your
+         {{ wmreLink({
+            text: 'feedback',
+            link: link,
+            linkTitle: linkTitle,
+            linkTarget: '_blank'
+            }) | indent(6) | trim
+         }}
+         &nbsp;will help us to improve it.
+      </p>
+      {%- endif %}
+   </div>
+   {%- endif %}
+</div>
+{% endmacro %}

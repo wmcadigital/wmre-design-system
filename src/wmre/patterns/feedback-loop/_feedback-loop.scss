@@ -1,0 +1,73 @@
+.wmre-feedback-loop {
+  // Add full-width blue border on desktop large display
+  @media all and(min-width: $breakpoint-xl) {
+    border-bottom: $size-sm solid get-color(cta);
+  }
+
+  .wmre-link {
+    color: $white;
+  }
+
+  // Override container defaults
+  .wmre-container {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-top: -$size-lg;
+    margin-right: auto;
+    margin-left: auto;
+    padding: $size-xs $size-md;
+    overflow: hidden;
+    color: $white;
+    background-color: get-color(cta);
+  }
+
+  // A bite more spacing on mobile
+  &__useful {
+    margin-bottom: $size-md;
+  }
+
+  &__form {
+    display: none;
+  }
+
+  &.wmre-is-open {
+    .wmre-container {
+      padding: $size-md;
+      border-top: $size-sm solid get-color(cta);
+      border-right: 1px solid get-color(cta);
+      border-left: 1px solid get-color(cta);
+      color: initial;
+      background-color: $white;
+      text-align: center;
+    }
+
+    .wmre-link {
+      color: get-color(cta);
+    }
+
+    .wmre-feedback-loop {
+      &__questions {
+        display: none;
+      }
+
+      &__form {
+        display: block;
+      }
+    }
+  }
+}
+
+// When on desktop then the feedback-loop should appear on one line
+@media all and(min-width: $breakpoint-md) {
+  .wmre-feedback-loop {
+    &__useful {
+      margin: 0;
+      float: left;
+    }
+
+    &__wrong {
+      float: right;
+    }
+  }
+}

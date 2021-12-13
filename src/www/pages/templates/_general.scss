@@ -1,0 +1,21 @@
+.wmre-html {
+  .wmre-grid--justify-between {
+    .wmre-p-r-sm {
+      @media screen and (max-width: $breakpoint-sm) {
+        padding: 0 !important;
+      }
+    }
+
+    .wmre-p-l-sm {
+      @media screen and (max-width: $breakpoint-sm) {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .wmre-page-contents {
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 0 !important;
+    }
+  }
+}

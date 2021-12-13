@@ -1,6 +1,11 @@
 import forEachPolyfill from './assets/vendor/js/polyfills/ie11-forEach';
 import colorPalettes from './pages/styles/colour-palettes/_color-palettes';
 import highlightJS from './_partials/component-example/_component-example';
+import cookies from '../wmre/patterns/cookies/_example';
+import headerJs from '../wmre/patterns/header/_example';
+import searchFilterJs from '../wmre/patterns/search/search-filter/_example';
+import footerJs from '../wmre/patterns/footer/_example';
+import accordionsJS from '../wmre/components/accordion/_example';
 
 const icons = () => {
   // Ajax SVG in, SVGS are referenced in app (Icon component)
@@ -15,4 +20,15 @@ const icons = () => {
   };
 };
 
-window.addEventListener('DOMContentLoaded', (forEachPolyfill, icons(), colorPalettes, highlightJS));
+window.addEventListener(
+  'DOMContentLoaded',
+  (forEachPolyfill(),
+  icons(),
+  colorPalettes(),
+  cookies(),
+  headerJs(),
+  searchFilterJs(),
+  footerJs(),
+  accordionsJS(),
+  highlightJS)
+);

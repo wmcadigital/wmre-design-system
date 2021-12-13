@@ -1,4 +1,4 @@
-$btn-border-radius: 30px;
+$btn-border-radius: 5px;
 $btn-border-width: 1px;
 $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
 
@@ -7,12 +7,13 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   box-sizing: border-box;
   display: inline-block;
   position: relative;
-  padding: 10px 20px;
+  padding: $size-sm;
   transition: $btn-transition;
-  border: 3px solid get-color(primary);
+  border: 1px solid transparent;
   border-radius: $btn-border-radius;
-  color: get-color(secondary);
-  background-color: $white;
+  color: $white;
+  background-color: get-color(primary);
+  font-family: $x-font-family-bold;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -20,8 +21,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   cursor: pointer;
 
   &:hover {
-    color: $white;
-    background-color: get-color(primary);
+    background-color: get-color(primary, 30, dark);
   }
 
   &:active,
@@ -29,26 +29,57 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   &:focus,
   &.wmre-is--active {
     outline: none;
-    color: $white;
-    background-color: get-color(primary);
+    background-color: get-color(primary, 50, dark);
     -webkit-appearance: none;
+  }
+
+  // button icon left styles
+  &__icon {
+    width: 22px;
+    height: 22px;
+    fill: $white;
+    vertical-align: top;
+  }
+
+  // button icon right style
+  &__icon--right {
+    margin-left: $size-sm;
+    float: right;
+  }
+
+  // Dark background variant
+  &--dark-bg {
+    color: get-color(primary);
+    background-color: $white;
+
+    &:hover {
+      background-color: get-color(primary, 90);
+    }
+
+    &:active,
+    &:target,
+    &:focus {
+      background-color: get-color(plannedDisruption);
+    }
+
+    &.wmre-is--active {
+      background-color: get-color(primary, 80);
+    }
   }
 
   // button primary styles
   &--primary {
-    background-color: $white;
+    background-color: get-color(primary);
 
     &:hover {
-      color: $white;
-      background-color: get-color(primary);
+      background-color: get-color(primary, 30, dark);
     }
 
     &:active,
     &:target,
     &:focus,
     &.wmre-is--active {
-      color: $white;
-      background-color: get-color(primary);
+      background-color: get-color(primary, 50, dark);
     }
   }
 
@@ -63,7 +94,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &:hover {
-      background-color: get-color(secondary, 70);
+      background-color: get-color(primary, 90);
     }
 
     &:active,
@@ -73,47 +104,14 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &.wmre-is--active {
-      background-color: get-color(secondary, 50);
+      background-color: get-color(primary, 75);
     }
 
     // Secondary (disabled)
     &.wmre-btn--disabled:disabled {
-      border-color: get-color(secondary);
-      color: get-color(secondary);
-      background: transparent;
-    }
-  }
-
-  // button mode
-  &--mode {
-    border: $btn-border-width solid get-color(primary);
-    color: get-color(primary);
-    background-color: $white;
-
-    .wmre-btn__icon {
-      margin-right: $size-xs;
-      fill: get-color(primary);
-    }
-
-    &:hover {
-      background-color: get-color(secondary, 70);
-    }
-
-    &:active,
-    &:target,
-    &:focus {
-      background-color: initial;
-    }
-
-    &.wmre-is--active {
-      background-color: get-color(secondary, 50);
-    }
-
-    // Modal disabled
-    &.wmre-btn--disabled:disabled {
       border-color: get-color(disable);
       color: get-color(disable);
-      background: $white;
+      background: transparent;
 
       .wmre-btn__icon {
         fill: get-color(disable);
@@ -121,11 +119,60 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
   }
 
+  // button cta styles
+  &--cta {
+    background-color: get-color(cta);
+
+    &:hover {
+      background-color: get-color(cta, 30, dark);
+    }
+
+    &:active,
+    &:target,
+    &:focus,
+    &.wmre-is--active {
+      background-color: get-color(cta, 50, dark);
+    }
+  }
+
+  // button destructive styles
+  &--destructive {
+    background-color: get-color(error);
+
+    &:hover {
+      background-color: get-color(error, 30, dark);
+    }
+
+    &:active,
+    &:target,
+    &:focus,
+    &.wmre-is--active {
+      background-color: get-color(error, 50, dark);
+    }
+  }
+
+  &--start {
+    background-color: get-color(success);
+
+    span {
+      border: $btn-border-width solid transparent;
+    }
+
+    &:hover {
+      background-color: get-color(success, 30, dark);
+    }
+
+    &:active,
+    &:target,
+    &:focus,
+    &.wmre-is--active {
+      background-color: get-color(success, 50, dark);
+    }
+  }
+
   // Disabled modifier (goes last to override above classes) for default btn
   &--disabled:disabled {
-    border-color: get-color(secondary);
-    color: get-color(disable);
-    background-color: get-color(secondary);
+    background-color: get-color(disable);
     cursor: not-allowed;
 
     .wmre-btn__icon {
@@ -137,6 +184,32 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     &:focus,
     &.wmre-is--active {
       background-color: get-color(disable);
+    }
+  }
+
+  // block modifier for full width buttons
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  // Show button like a normal link modifier
+  &--link {
+    display: inline;
+    padding: 0;
+    border-radius: 0;
+    color: get-color(cta, 10, dark);
+    background: none;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:active,
+    &:target,
+    &:hover,
+    &:focus,
+    &.wmre-is--active {
+      background: none;
     }
   }
 }

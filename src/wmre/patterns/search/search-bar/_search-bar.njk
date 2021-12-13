@@ -1,0 +1,10 @@
+{% macro wmreSearchbar(params) %}
+{% set placeHolder = params.placeHolder or 'Site search...' %}
+
+<form class="wmre-search-bar">
+    <input aria-label="Search" type="search" class="wmre-search-bar__input wmre-fe-input" placeholder="{{placeHolder}}">
+    <button class="wmre-search-bar__btn" types="submit">
+        <svg><title>Search</title><use xlink:href="#wmre-general-search" href="#wmre-general-search"></use></svg>
+    </button>
+</form>
+{% endmacro %}
