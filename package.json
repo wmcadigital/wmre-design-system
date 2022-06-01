@@ -108,7 +108,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@sentry/browser": "^6.15.0",
+    "@sentry/browser": "^7.0.0",
     "path": "^0.12.7"
   }
 }
