@@ -3,7 +3,9 @@ const { src, dest } = require('gulp');
 const plugins = require('gulp-load-plugins')();
 
 // Local requires
-const paths = require('./paths.js');
+const sass = require('gulp-sass')(require('sass'));
+const paths = require('./paths');
+
 const { getRoot, packageJson, build } = require('./utils');
 
 // Process, lint, and minify Sass files
@@ -18,7 +20,7 @@ module.exports.buildStyles = () => {
       })
     )
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.sass().on('error', plugins.sass.logError)) // Compile Sass
+    .pipe(sass().on('error', sass.logError)) // Compile Sass
     .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
     .pipe(plugins.autoprefixer()) // Prefix css with older browser support
     .pipe(plugins.cleanCss({ level: 2 })) // Minify css
@@ -34,7 +36,7 @@ module.exports.buildStyles = () => {
 module.exports.buildReactNativeStyles = () => {
   return src(paths.styles.reactNativeSrc)
     .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
-    .pipe(plugins.sass().on('error', plugins.sass.logError)) // Compile Sass
+    .pipe(sass().on('error', sass.logError)) // Compile Sass
     .pipe(plugins.autoprefixer()) // Prefix css with older browser support
     .pipe(plugins.reactNativeStylesheetCss()) // Converts CSS to React Native stylesheet
     .pipe(plugins.uglifyEs.default()) // Mangle var names etc.
