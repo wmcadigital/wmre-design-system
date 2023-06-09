@@ -1,7 +1,7 @@
 // Vars
 @import "https://fonts.googleapis.com/css?family=Noto+Sans+Display:400,700&display=swap"; // Google Fonts
 @import "https://fonts.googleapis.com/css?family=DM+Sans:400,700"; // Google Fonts
-@import "vars-dark";
+@import "vars";
 // Mixins
 @import "mixins";
 
@@ -14,7 +14,7 @@
 @import "wmre-grid/wmre-grid";
 
 // Component Styles
-@import "../../components/components-dark"; // Import all pattern styles
+@import "../../components/components"; // Import all pattern styles
 
 // Pattern Styles
-@import "../../patterns/patterns-dark"; // Import all pattern styles
+@import "../../patterns/patterns"; // Import all pattern styles

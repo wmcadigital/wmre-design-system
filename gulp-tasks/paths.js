@@ -7,7 +7,7 @@ module.exports = {
   },
   styles: {
     src: ['src/**/*.scss'], // src of styles to watch
-    minifySrc: ['src/wmre/assets/sass/wmre-components.scss', 'src/www/wmre-website.scss'], // List of scss file(s) which should be processed, linted & minified
+    minifySrc: ['src/wmre/assets/sass/wmre-components.scss', 'src/wmre/assets/sass/wmre-components-dark.scss', 'src/www/wmre-website.scss'], // List of scss file(s) which should be processed, linted & minified
     output: 'docs/css/', // output location of minified styles
     reactNativeSrc: 'src/wmre/assets/sass/wmre-components.scss'
   },
